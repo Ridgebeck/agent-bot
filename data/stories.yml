@@ -1,0 +1,226 @@
+version: "2.0"
+stories:
+
+- story: greet short
+  steps:
+  - intent: greet
+  - action: utter_greet
+
+- story: Story from Conversation ID f751c8d62875481693f0ab5cd1971aa7
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: chit_chat_person
+  - action: utter_chit_chat_agent
+  - intent: bot_challenge
+  - action: utter_iamnotabot
+
+- story: Story from Conversation ID baba770a153f45c58ab9b2d52f24f387
+  steps:
+  - intent: goal_of_the_game
+  - action: utter_goal_of_the_game
+  - intent: mood_great
+  - action: utter_happy
+
+- story: Story from Conversation ID 488c1150168a42a49c77712e3f47814c
+  steps:
+  - slot_was_set:
+    - location: paris
+  - intent: location
+    entities:
+    - location: paris
+  - action: action_verify_location
+  - slot_was_set:
+    - location: london
+  - intent: location
+    entities:
+    - location: london
+  - action: action_verify_location
+  - slot_was_set:
+    - location: boston
+  - intent: location
+    entities:
+    - location: boston
+  - action: action_verify_location
+  - slot_was_set:
+    - solution_1: Boston
+  - slot_was_set:
+    - name: jim
+  - intent: name
+    entities:
+    - name: jim
+  - action: action_verify_name
+  - slot_was_set:
+    - name: peter
+  - intent: name
+    entities:
+    - name: peter
+  - action: action_verify_name
+  - slot_was_set:
+    - name: jack
+  - intent: name
+    entities:
+    - name: jack
+  - action: action_verify_name
+  - slot_was_set:
+    - solution_2: Jack
+
+
+- story: Story from Conversation ID ff10e1d72b144701be7d16a0376fced6
+  steps:
+  - slot_was_set:
+    - location: new york
+  - intent: location
+    entities:
+    - location: new york
+  - action: action_verify_location
+  - slot_was_set:
+    - location: boston
+  - intent: location
+    entities:
+    - location: boston
+  - action: action_verify_location
+  - slot_was_set:
+    - solution_1: Boston
+  - slot_was_set:
+    - name: Gwen
+  - intent: name
+    entities:
+    - name: Gwen
+  - action: action_verify_name
+  - slot_was_set:
+    - name: Jack
+  - intent: name
+    entities:
+    - name: Jack
+  - action: action_verify_name
+  - slot_was_set:
+    - solution_2: Jack
+  - slot_was_set:
+    - name: Jim
+  - intent: name
+    entities:
+    - name: Jim
+  - action: utter_name_old
+
+
+- story: Story from Conversation ID e0c4e46ffdbd49dfa00acbc1ea733584
+  steps:
+  - slot_was_set:
+    - location: paris
+  - intent: location
+    entities:
+    - location: paris
+  - action: action_verify_location
+  - slot_was_set:
+    - location: new york
+  - intent: location
+    entities:
+    - location: new york
+  - action: action_verify_location
+  - slot_was_set:
+    - location: boston
+  - intent: location
+    entities:
+    - location: boston
+  - action: action_verify_location
+  - slot_was_set:
+    - solution_1: Boston
+  - slot_was_set:
+    - location: Boston
+  - intent: location
+    entities:
+    - location: Boston
+  - action: utter_location_old
+  - slot_was_set:
+    - name: Jim
+  - intent: name
+    entities:
+    - name: Jim
+  - action: action_verify_name
+  - slot_was_set:
+    - name: jack
+  - intent: name
+    entities:
+    - name: jack
+  - action: action_verify_name
+  - slot_was_set:
+    - solution_2: Jack
+  - slot_was_set:
+    - name: Jack
+  - intent: name
+    entities:
+    - name: Jack
+  - action: utter_name_old
+  - slot_was_set:
+    - passcode: '12347'
+  - intent: passcode
+    entities:
+    - passcode: '12347'
+  - action: action_verify_passcode
+  - slot_was_set:
+    - passcode: '456123'
+  - intent: passcode
+    entities:
+    - passcode: '456123'
+  - action: action_verify_passcode
+  - slot_was_set:
+    - passcode: '123456'
+  - intent: passcode
+    entities:
+    - passcode: '123456'
+  - action: action_verify_passcode
+  - slot_was_set:
+    - solution_3: '123456'
+  - intent: passcode
+    entities:
+    - passcode: '123456'
+  - action: utter_passcode_old
+
+- story: Story from Conversation ID 85db9399c8184b079938180a13213685
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: bot_challenge
+  - action: utter_iamnotabot
+  - intent: chit_chat_person
+  - action: utter_chit_chat_agent
+  - intent: goal_of_the_game
+  - action: utter_goal_of_the_game
+
+- story: Story from Conversation ID c28ab9b2e3494d2a9e6c9d4b8693fdae
+  steps:
+  - intent: are_you_russ
+  - action: utter_are_you_russ
+  - intent: strix
+  - action: utter_strix
+
+- story: Story from Conversation ID c4486b3e72f24eacafd3cbb25bf0f27e
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mission
+  - action: utter_mission
+  - intent: goal_of_the_game
+  - action: utter_goal_of_the_game
+  - intent: mood_great
+  - action: utter_happy
+
+- story: Story from Conversation ID 98587225d7164228a032dc072435ccfb
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: chit_chat_person
+  - action: utter_chit_chat_agent
+  - intent: mission
+  - action: utter_mission
+  - intent: goal_of_the_game
+  - action: utter_goal_of_the_game
+  - intent: goodbye
+  - action: utter_stayhere
+  - intent: are_you_russ
+  - action: utter_are_you_russ
+  - intent: strix
+    entities:
+    - strix: strix
+  - action: utter_strix

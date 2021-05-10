@@ -1,0 +1,35 @@
+[
+  {
+    "text": "New York",
+    "entities": [
+      {
+        "start": 0,
+        "end": 8,
+        "value": "New York",
+        "entity": "location"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "location",
+        "start": 4,
+        "end": 8,
+        "confidence_entity": 0.6578903198242188,
+        "value": "York",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Ankara",
+    "entities": [
+      {
+        "start": 0,
+        "end": 6,
+        "value": "Ankara",
+        "entity": "location"
+      }
+    ],
+    "predicted_entities": []
+  }
+]

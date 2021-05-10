@@ -1,0 +1,118 @@
+version: '2.0'
+config:
+  store_entities_as_slots: true
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- location:
+    use_entities: true
+- greet:
+    use_entities: true
+- goodbye:
+    use_entities: true
+- affirm:
+    use_entities: true
+- deny:
+    use_entities: true
+- mood_great:
+    use_entities: true
+- mood_unhappy:
+    use_entities: true
+- bot_challenge:
+    use_entities: true
+- ask_for_password:
+    use_entities: true
+- chit_chat_person:
+    use_entities: true
+- name:
+    use_entities: true
+- passcode:
+    use_entities: true
+- goal_of_the_game:
+    use_entities: true
+- are_you_russ:
+    use_entities: true
+- strix:
+    use_entities: true
+- mission:
+    use_entities: true
+entities:
+- location
+- name
+- passcode
+- strix
+slots:
+  location:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  name:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  passcode:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  solution_1:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: false
+    influence_conversation: true
+  solution_2:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: false
+    influence_conversation: true
+  solution_3:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: false
+    influence_conversation: true
+responses:
+  utter_greet:
+  - text: Hi agents, pleasure to work together on this case.
+  utter_did_that_help:
+  - text: Did that help you?
+  utter_happy:
+  - text: Great, carry on!
+  utter_stayhere:
+  - text: You are not done yet. I need your help!
+  utter_goodbye:
+  - text: Bye
+  utter_affirm:
+  - text: Great! Let's do it!
+  utter_iamnotabot:
+  - image: https://media0.giphy.com/media/L3WZFMFFqgtxnXe4bf/giphy.gif
+    text: What? Could a bot do THIS?
+  utter_submit:
+  - text: Form has been filled!
+  utter_strix:
+  - text: STRIX is a global organization fighting cyber crime.
+  utter_password:
+  - text: This is what I need from you geniuses.
+  utter_chit_chat_agent:
+  - text: Can we focus on the case right now and chit chat later.
+  utter_location_old:
+  - text: Location riddle was solved. - ADD SARCASTIC ANSWER HERE -
+  utter_name_old:
+  - text: I already know the name.
+  utter_passcode_old:
+  - text: I already know the passcode.
+  utter_goal_of_the_game:
+  - text: The goal is to figure out if there is an attack on the traffic control system and if so who is trying to hack the city.
+  utter_are_you_russ:
+  - image: https://media.giphy.com/media/ggtVNW8GLpl6Ib8lsw/giphy.gif
+    text: Of course it's me.
+  utter_mission:
+  - text: It sounds like there are some suspicous activities going on. Just this morning our systems detected an abnormality in the traffic control system and we need to figure out what is going on.
+actions:
+- action_verify_location
+- action_verify_name
+- action_verify_passcode
+forms: {}
+e2e_actions: []

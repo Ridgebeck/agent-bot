@@ -1,0 +1,293 @@
+version: "2.0"
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+    - hi Russ
+    - Hey Russ
+    - hello Russ
+    - Hi
+    - hey hey baby
+    - hallo
+    - hallo agent
+    - hallo Russ
+    - Hi agent!
+    - Hi Agent!
+    - Hi Russ!
+    - Hallo Russ
+    - Hallo
+    - Hallo agent
+    - Hi agent
+- intent: goodbye
+  examples: |
+    - good afternoon
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+    - sure thing
+    - for sure!
+    - got it
+    - sounds good
+    - sure
+    - ok
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+    - thanks
+    - Thanks
+    - Cool
+    - sounds great!
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+    - are you like siri?
+    - are you smarter than Alexa?
+    - you talk like a bot
+    - are you sure you are not a bot
+    - are you smarter than siri?
+    - are you sure you are not a bot?
+    - It feels like I am talking to a bot?
+    - You sound like a bot?
+    - Are you sure you are not a bot?
+- intent: ask_for_password
+  examples: |
+    - what is the password
+    - tell me the password
+    - can you tell us the password
+    - could you give us the code
+    - what is the pwd
+    - we need the password
+    - we really need the pw from you
+    - I need the passcode dude
+    - what is the password?
+    - the password dude
+- intent: chit_chat_person
+  examples: |
+    - who are you?
+    - what's you name?
+    - where do you live?
+    - how old are you?
+    - where do you come from?
+    - what are your hobbies?
+    - where are you from?
+    - what ice cream is the best?
+    - what is your favorite beer
+    - who are you
+    - what's your favorite beer?
+    - what are you up to?
+    - what is your name?
+    - how are you?
+    - what's your favorite ice cream?
+    - how are you today?
+    - By the way what's your favorite ice cream?
+    - what are you doing?
+    - How are you?
+- intent: goal_of_the_game
+  examples: |
+    - why are we here?
+    - what's the goal of this game?
+    - what are we doing here?
+    - what is this game all about?
+    - what do we have to achieve
+    - how do we win this game?
+    - how do I win here?
+    - So what are we trying to solve then?
+    - what is the case we are working on?
+    - what is the goal here?
+    - What is the goal here?
+    - What is the goal of this?
+    - What is the goal of the mission?
+    - what is the goal of this game?
+    - Why are we here?
+    - great, what is the goal of this mission then?
+    - ok, so what is the goal of the case?
+    - what do we need to solve here then?
+    - wow ok. what are we trying to solve?
+- intent: mission
+  examples: |
+    - what is the case?
+    - what's the mission we are working on?
+    - Tell me more about this mission
+    - What is the case all about?
+    - Do you know more about this case?
+    - Can you give us more context about this case?
+    - Tell us more about this mission
+    - what is the case about?
+    - sure, what is the case about?
+    - which mission?
+- intent: are_you_russ
+  examples: |
+    - Are you Russ
+    - Are you really Russ?
+    - Is your name Russ
+    - Are we talking to Russ?
+    - Are you sure you are Agent Russ?
+    - Are you sure you are Russ?
+    - Are you Russ?
+    - are you Russ?
+    - are you sure you are Russ?
+- intent: strix
+  examples: |
+    - what is [strix](strix)
+    - can you tell me more about [strix](strix)
+    - What is the [agency](strix) we work for?
+    - Who is behind [strix](strix)
+    - Can you tell me more about [Strix](strix)
+    - ok, can you tell me  a bit more about [strix](strix)
+- intent: location
+  examples: |
+    - [Sitka](location)
+    - [Los Angeles](location)
+    - [San Francisco](location)
+    - [San Diego](location)
+    - [Houston](location)
+    - [Dallas](location)
+    - [Austin](location)
+    - [Chicago](location)
+    - [Springfield](location)
+    - [New York](location)
+    - [Miami](location)
+    - [Paris](location)
+    - [Berlin](location)
+    - [Ankara](location)
+    - [Madrid](location)
+    - [Lisbon](location)
+    - [London](location)
+    - [Orlando](location)
+    - [Baltimore](location)
+    - [Portland](location)
+    - [boston](location)
+    - [new york](location)
+    - [Boston](location)
+    - [paris](location)
+    - [london](location)
+    - [san francisco](location)
+    - [chicago](location)
+    - [Los angeles](location)
+    - [New york](location)
+    - [boStOn](location)
+    - [bostON](location)
+- intent: name
+  examples: |
+    - [Tom](name)
+    - [Louis](name)
+    - [Petra](name)
+    - [Gill](name)
+    - [Tim](name)
+    - [Jimmy](name)
+    - [James](name)
+    - [Tommy](name)
+    - [Bill](name)
+    - [Jenna](name)
+    - [Haley](name)
+    - [Lucy](name)
+    - [Peter](name)
+    - [jack](name)
+    - [Jim](name)
+    - [Jack](name)
+    - [Gwen](name)
+    - [peter](name)
+    - [jim](name)
+    - [Benny](name)
+    - [jake](name)
+- intent: passcode
+  examples: |
+    - [3847](passcode)
+    - [8796](passcode)
+    - [3458](passcode)
+    - [9786](passcode)
+    - [38471](passcode)
+    - [75148](passcode)
+    - [97625](passcode)
+    - [55778](passcode)
+    - [98003](passcode)
+    - [974163](passcode)
+    - [578143](passcode)
+    - [178963](passcode)
+    - [756984](passcode)
+    - [115568](passcode)
+    - [4567387](passcode)
+    - [1447852](passcode)
+    - [1445698](passcode)
+    - [9873256](passcode)
+    - [6642123](passcode)
+    - [88741258](passcode)
+    - [87569874](passcode)
+    - [12366987](passcode)
+    - [78556874](passcode)
+    - [66421235](passcode)
+    - [123456](passcode)
+    - [456123](passcode)
+    - [12347](passcode)[12347](passcode)
+    - [12347](passcode)[12347](passcode)
+- regex: passcode
+  examples: |
+    - \d[0-9]{4,8}

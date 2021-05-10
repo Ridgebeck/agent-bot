@@ -1,0 +1,107 @@
+{
+  "affirm": {
+    "precision": 0.5,
+    "recall": 0.16666666666666666,
+    "f1-score": 0.25,
+    "support": 6,
+    "confused_with": {
+      "mood_unhappy": 1,
+      "mood_great": 1,
+      "greet": 1
+    }
+  },
+  "ask_for_password": {
+    "precision": 0.8333333333333334,
+    "recall": 1.0,
+    "f1-score": 0.9090909090909091,
+    "support": 10,
+    "confused_with": {}
+  },
+  "bot_challenge": {
+    "precision": 0.8571428571428571,
+    "recall": 0.8571428571428571,
+    "f1-score": 0.8571428571428571,
+    "support": 7,
+    "confused_with": {
+      "chit_chat_person": 1
+    }
+  },
+  "greet": {
+    "precision": 0.8823529411764706,
+    "recall": 0.8823529411764706,
+    "f1-score": 0.8823529411764706,
+    "support": 17,
+    "confused_with": {
+      "mood_great": 2
+    }
+  },
+  "deny": {
+    "precision": 0.5555555555555556,
+    "recall": 0.7142857142857143,
+    "f1-score": 0.6250000000000001,
+    "support": 7,
+    "confused_with": {
+      "mood_unhappy": 1,
+      "affirm": 1
+    }
+  },
+  "mood_great": {
+    "precision": 0.6428571428571429,
+    "recall": 0.6,
+    "f1-score": 0.6206896551724138,
+    "support": 15,
+    "confused_with": {
+      "mood_unhappy": 3,
+      "greet": 1
+    }
+  },
+  "goodbye": {
+    "precision": 0.7777777777777778,
+    "recall": 0.6363636363636364,
+    "f1-score": 0.7000000000000001,
+    "support": 11,
+    "confused_with": {
+      "mood_great": 2,
+      "mood_unhappy": 1
+    }
+  },
+  "location": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 18,
+    "confused_with": {}
+  },
+  "mood_unhappy": {
+    "precision": 0.6470588235294118,
+    "recall": 0.7857142857142857,
+    "f1-score": 0.7096774193548386,
+    "support": 14,
+    "confused_with": {
+      "deny": 2,
+      "goodbye": 1
+    }
+  },
+  "chit_chat_person": {
+    "precision": 0.9090909090909091,
+    "recall": 0.9090909090909091,
+    "f1-score": 0.9090909090909091,
+    "support": 11,
+    "confused_with": {
+      "ask_for_password": 1
+    }
+  },
+  "accuracy": 0.7931034482758621,
+  "macro avg": {
+    "precision": 0.7605169340463458,
+    "recall": 0.755161701044054,
+    "f1-score": 0.7463044691028399,
+    "support": 116
+  },
+  "weighted avg": {
+    "precision": 0.7886160211210922,
+    "recall": 0.7931034482758621,
+    "f1-score": 0.7837218774953711,
+    "support": 116
+  }
+}

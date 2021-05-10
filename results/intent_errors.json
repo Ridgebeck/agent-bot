@@ -1,0 +1,194 @@
+[
+  {
+    "text": "have a nice day",
+    "intent": "goodbye",
+    "intent_prediction": {
+      "name": "deny",
+      "confidence": 0.3130577802658081
+    }
+  },
+  {
+    "text": "n",
+    "intent": "deny",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.6178403496742249
+    }
+  },
+  {
+    "text": "I don't feel very well",
+    "intent": "mood_unhappy",
+    "intent_prediction": {
+      "name": "deny",
+      "confidence": 0.4627048671245575
+    }
+  },
+  {
+    "text": "what ice cream is the best?",
+    "intent": "chit_chat_person",
+    "intent_prediction": {
+      "name": "ask_for_password",
+      "confidence": 0.4900318384170532
+    }
+  },
+  {
+    "text": "yes",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.6013720631599426
+    }
+  },
+  {
+    "text": "indeed",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "mood_unhappy",
+      "confidence": 0.4615630805492401
+    }
+  },
+  {
+    "text": "extremely good",
+    "intent": "mood_great",
+    "intent_prediction": {
+      "name": "mood_unhappy",
+      "confidence": 0.674555778503418
+    }
+  },
+  {
+    "text": "so good",
+    "intent": "mood_great",
+    "intent_prediction": {
+      "name": "mood_unhappy",
+      "confidence": 0.42490872740745544
+    }
+  },
+  {
+    "text": "not good",
+    "intent": "mood_unhappy",
+    "intent_prediction": {
+      "name": "deny",
+      "confidence": 0.5086854100227356
+    }
+  },
+  {
+    "text": "are you like siri?",
+    "intent": "bot_challenge",
+    "intent_prediction": {
+      "name": "chit_chat_person",
+      "confidence": 0.3505714535713196
+    }
+  },
+  {
+    "text": "let's go",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "mood_great",
+      "confidence": 0.36727195978164673
+    }
+  },
+  {
+    "text": "good afternoon",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "mood_great",
+      "confidence": 0.3506659269332886
+    }
+  },
+  {
+    "text": "good afternoon",
+    "intent": "goodbye",
+    "intent_prediction": {
+      "name": "mood_great",
+      "confidence": 0.3506659269332886
+    }
+  },
+  {
+    "text": "that sounds good",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "mood_great",
+      "confidence": 0.48857545852661133
+    }
+  },
+  {
+    "text": "feeling like a king",
+    "intent": "mood_great",
+    "intent_prediction": {
+      "name": "bot_challenge",
+      "confidence": 0.6696230173110962
+    }
+  },
+  {
+    "text": "cu",
+    "intent": "goodbye",
+    "intent_prediction": {
+      "name": "mood_unhappy",
+      "confidence": 0.4405137300491333
+    }
+  },
+  {
+    "text": "good by",
+    "intent": "goodbye",
+    "intent_prediction": {
+      "name": "mood_great",
+      "confidence": 0.8927776217460632
+    }
+  },
+  {
+    "text": "y",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "deny",
+      "confidence": 0.5335502624511719
+    }
+  },
+  {
+    "text": "not really",
+    "intent": "deny",
+    "intent_prediction": {
+      "name": "mood_unhappy",
+      "confidence": 0.5258980393409729
+    }
+  },
+  {
+    "text": "I am feeling very good",
+    "intent": "mood_great",
+    "intent_prediction": {
+      "name": "mood_unhappy",
+      "confidence": 0.7775177359580994
+    }
+  },
+  {
+    "text": "I am going to save the world",
+    "intent": "mood_great",
+    "intent_prediction": {
+      "name": "ask_for_password",
+      "confidence": 0.8553763628005981
+    }
+  },
+  {
+    "text": "of course",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "goodbye",
+      "confidence": 0.48268431425094604
+    }
+  },
+  {
+    "text": "thanks",
+    "intent": "mood_great",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.487663596868515
+    }
+  },
+  {
+    "text": "my day was horrible",
+    "intent": "mood_unhappy",
+    "intent_prediction": {
+      "name": "goodbye",
+      "confidence": 0.5606090426445007
+    }
+  }
+]

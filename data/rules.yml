@@ -1,0 +1,72 @@
+version: "2.0"
+
+rules:
+- rule: Don't let the user off the hook
+  steps:
+  - intent: goodbye
+  - action: utter_stayhere
+
+- rule: Don't admit to being a bot
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamnotabot
+
+- rule: Run custom action to verify the input if intent is location
+  condition:
+  - slot_was_set:
+    - solution_1: null
+  steps:
+  - intent: location
+  - action: action_verify_location
+
+- rule: Utter that location is known if intent is location but riddle 1 has been solved
+  condition:
+  - slot_was_set:
+    - solution_1: filled
+  steps:
+  - intent: location
+  - action: utter_location_old
+
+- rule: Run custom verification action if intent is name and riddle 1 has been solved
+  condition:
+  - slot_was_set:
+    - solution_1: filled
+  - slot_was_set:
+    - solution_2: null
+  steps:
+  - intent: name
+  - action: action_verify_name
+
+- rule: Utter that name is known if intent is name but riddle 1 and 2 have been solved
+  condition:
+  - slot_was_set:
+    - solution_1: filled
+  - slot_was_set:
+    - solution_2: filled
+  steps:
+  - intent: name
+  - action: utter_name_old
+
+- rule: Run custom verification action if intent is passcode and riddle 3 has not been solved
+  condition:
+  - slot_was_set:
+    - solution_1: filled
+  - slot_was_set:
+    - solution_2: filled
+  - slot_was_set:
+    - solution_3: null    
+  steps:
+  - intent: passcode
+  - action: action_verify_passcode
+
+- rule: Run custom verification action if intent is passcode and riddle 3 has been solved
+  condition:
+  - slot_was_set:
+    - solution_1: filled
+  - slot_was_set:
+    - solution_2: filled
+  - slot_was_set:
+    - solution_3: filled    
+  steps:
+  - intent: passcode
+  - action: utter_passcode_old   
