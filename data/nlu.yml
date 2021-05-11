@@ -4,7 +4,6 @@ nlu:
   examples: |
     - hey
     - hello
-    - hi
     - hello there
     - good morning
     - good evening
@@ -30,19 +29,48 @@ nlu:
     - Hallo
     - Hallo agent
     - Hi agent
+    - hello, agent
+- intent: chit_chat_person
+  examples: |
+    - hi
+    - where do you live?
+    - how old are you?
+    - do you like gummy bears
+    - do you like sports
+    - whats your favorite sport
+    - where do you come from?
+    - what are your hobbies?
+    - where are you from?
+    - what ice cream is the best?
+    - what is your favorite beer
+    - what's your favorite beer?
+    - what are you up to?
+    - how are you?
+    - what's your favorite ice cream?
+    - how are you today?
+    - By the way what's your favorite ice cream?
+    - what are you doing?
+    - How are you?
 - intent: goodbye
   examples: |
-    - good afternoon
+    - good bye
     - cu
     - good by
     - cee you later
+    - see you
+    - see you later
+    - later
+    - later skater
+    - I have to go
+    - we have to go
+    - gotta go
+    - gotta go, bye
     - good night
     - bye
     - goodbye
     - have a nice day
     - see you around
     - bye bye
-    - see you later
 - intent: affirm
   examples: |
     - yes
@@ -50,6 +78,7 @@ nlu:
     - indeed
     - of course
     - that sounds good
+    - sounds great
     - correct
     - sure thing
     - for sure!
@@ -57,51 +86,33 @@ nlu:
     - sounds good
     - sure
     - ok
+    - affirmative
+    - absolutely
+    - totally
+    - absolutely, yes
+    - yeah
+    - yes Sir
+    - yep
+    - yep!
+    - for shizzle
+    - yeppers
+    - agreed
+    - I agree
+    - we agree
 - intent: deny
   examples: |
     - no
     - n
     - never
     - I don't think so
-    - don't like that
     - no way
     - not really
-- intent: mood_great
-  examples: |
-    - perfect
-    - great
-    - amazing
-    - feeling like a king
-    - wonderful
-    - I am feeling very good
-    - I am great
-    - I am amazing
-    - I am going to save the world
-    - super stoked
-    - extremely good
-    - so so perfect
-    - so good
-    - so perfect
-    - thanks
-    - Thanks
-    - Cool
-    - sounds great!
-- intent: mood_unhappy
-  examples: |
-    - my day was horrible
-    - I am sad
-    - I don't feel very well
-    - I am disappointed
-    - super sad
-    - I'm so sad
-    - sad
-    - very sad
-    - unhappy
-    - not good
-    - not very good
-    - extremly sad
-    - so saad
-    - so sad
+    - nooooo
+    - uhm no
+    - would never do that
+    - I don't agree
+    - I would not do that
+    - nonono
 - intent: bot_challenge
   examples: |
     - are you a bot?
@@ -109,49 +120,103 @@ nlu:
     - am I talking to a bot?
     - am I talking to a human?
     - are you like siri?
+    - are you like Alexa
     - are you smarter than Alexa?
+    - you are not human
+    - you are a robot
+    - you behave like a robot
+    - you speak like a robot
+    - you speak like a bot
     - you talk like a bot
-    - are you sure you are not a bot
     - are you smarter than siri?
     - are you sure you are not a bot?
-    - It feels like I am talking to a bot?
+    - It feels like I am talking to a bot
     - You sound like a bot?
     - Are you sure you are not a bot?
-- intent: ask_for_password
+    - are you real?
+    - are u real
+- intent: unhappy_or_stuck
   examples: |
-    - what is the password
-    - tell me the password
-    - can you tell us the password
-    - could you give us the code
-    - what is the pwd
-    - we need the password
-    - we really need the pw from you
-    - I need the passcode dude
-    - what is the password?
-    - the password dude
-- intent: chit_chat_person
+    - this sucks
+    - we are not getting it
+    - I am not getting it
+    - what's the point
+    - we are stuck
+    - I am stuck
+    - this is going nowhere
+    - this is frustrating
+    - we have no clue
+    - we have no idea
+    - I have no idea
+    - I have absolutely no idea
+    - this blows
+    - we are not making progress
+    - no progress
+    - absolutely stuck
+    - no idea what to do
+    - this is bad
+    - this game sucks
+    - this game is bad
+    - i hate this game
+- intent: need_help
   examples: |
-    - who are you?
-    - what's you name?
-    - where do you live?
-    - how old are you?
-    - where do you come from?
-    - what are your hobbies?
-    - where are you from?
-    - what ice cream is the best?
-    - what is your favorite beer
-    - who are you
-    - what's your favorite beer?
-    - what are you up to?
-    - what is your name?
-    - how are you?
-    - what's your favorite ice cream?
-    - how are you today?
-    - By the way what's your favorite ice cream?
-    - what are you doing?
-    - How are you?
-- intent: goal_of_the_game
+    - we need help
+    - I need help
+    - we need a hint
+    - I need a hint
+    - can you help us?
+    - hint
+    - help!
+    - help please
+    - hint please
+    - help us!
+    - we need your help
+    - we need your advice
+    - we need your input
+    - you need to help us
+    - help needed
+    - do you know what to do?
+    - I could need some help here
+    - please help us
+    - can you give us a hint
+- intent: praise
   examples: |
+    - you are awesome
+    - you are great
+    - you are fantastic
+    - you are the best
+    - you are amazing
+    - I love you
+    - we love you
+    - you rock
+    - you killed it
+    - you nailed it
+    - you did it
+    - you son of a gun
+    - you are a rockstar
+    - you are simply the best
+    - you are gorgeous
+    - you look good
+    - you are the best agent ever
+    - you blew my mind
+    - you blew our minds
+    - you are phenomenal
+    - you are a treat
+    - you are my hero
+    - you are our hero
+- intent: whats_the_next_goal
+  examples: |
+    - I don't know what to do
+    - we dont know what to do
+    - what should we do?
+    - what should we do again?
+    - what do you need
+    - what do you need again?
+    - whats the goal?
+    - what's the goal
+    - what is required
+    - what is the next step?
+    - what are the next steps?
     - why are we here?
     - what's the goal of this game?
     - what are we doing here?
@@ -162,7 +227,6 @@ nlu:
     - So what are we trying to solve then?
     - what is the case we are working on?
     - what is the goal here?
-    - What is the goal here?
     - What is the goal of this?
     - What is the goal of the mission?
     - what is the goal of this game?
@@ -171,40 +235,103 @@ nlu:
     - ok, so what is the goal of the case?
     - what do we need to solve here then?
     - wow ok. what are we trying to solve?
-- intent: mission
+    - what are you looking for?
+    - what do you need, again?
+    - what should we look for?
+- intent: profanity
   examples: |
-    - what is the case?
-    - what's the mission we are working on?
-    - Tell me more about this mission
-    - What is the case all about?
-    - Do you know more about this case?
-    - Can you give us more context about this case?
-    - Tell us more about this mission
-    - what is the case about?
-    - sure, what is the case about?
-    - which mission?
-- intent: are_you_russ
+    - fuck you
+    - I hate you!
+    - you sucker
+    - you suck balls
+    - motherfucker
+    - mofo
+    - asshole
+    - cunt
+    - idiot
+    - you are a cunt
+    - you are an asshole
+    - you bastard
+    - you bloody idiot
+    - you bloody bastard
+    - you are so dumm
+    - I hate everything about you
+    - faggot
+    - you are a faggot
+    - nigger
+    - you are a nigger
+    - you nigger
+    - nigga
+    - you are a nigga
+    - shut up!
+    - shut your hole
+    - you brick
+    - you fucking moron
+    - you fucking animal
+    - you fucker
+    - you are a nazi
+- intent: who_are_you
   examples: |
+    - who are you?
+    - what's your name?
+    - what is your name
+    - how are you called
+    - your name?
+    - who are you again
+    - what are you
+    - firstname?
+    - lastname?
+    - whats your firstname
+    - who am I talking to?
+    - who are we talking to?
+    - who is this?
+    - who is it?
+    - who r u
+    - who are u
+    - I didn't get your name
     - Are you Russ
     - Are you really Russ?
     - Is your name Russ
     - Are we talking to Russ?
     - Are you sure you are Agent Russ?
     - Are you sure you are Russ?
-    - Are you Russ?
     - are you Russ?
-    - are you sure you are Russ?
+- intent: where_are_you
+  examples: |
+    - where are you?
+    - whats your location
+    - where r u
+    - where are you right now
+    - what is your location
+    - where are you located?
+    - where are you currently
+    - are you close?
+    - are you in San Francisco?
+    - are you nearby?
+    - are you watching us?
+    - are you in the USA
+    - are you in the US
+    - are you in the states
+    - are you at the headquarters?
+    - are you at Strix?
+    - are you on the road
 - intent: strix
   examples: |
     - what is [strix](strix)
+    - what is this [agency](strix)
     - can you tell me more about [strix](strix)
+    - can you tell me more about the [agency](strix)
     - What is the [agency](strix) we work for?
     - Who is behind [strix](strix)
+    - Who is behind this [agency](strix)
     - Can you tell me more about [Strix](strix)
-    - ok, can you tell me  a bit more about [strix](strix)
+    - Can you tell me more about the [agency](strix)
+    - ok, can you tell me a bit more about [strix](strix)
+    - ok, can you tell me a bit more about the [agency](strix)
+    - who are you working for
+    - who are we working for
 - intent: location
   examples: |
-    - [Sitka](location)
     - [Los Angeles](location)
     - [San Francisco](location)
     - [San Diego](location)
@@ -235,59 +362,3 @@ nlu:
     - [New york](location)
     - [boStOn](location)
     - [bostON](location)
-- intent: name
-  examples: |
-    - [Tom](name)
-    - [Louis](name)
-    - [Petra](name)
-    - [Gill](name)
-    - [Tim](name)
-    - [Jimmy](name)
-    - [James](name)
-    - [Tommy](name)
-    - [Bill](name)
-    - [Jenna](name)
-    - [Haley](name)
-    - [Lucy](name)
-    - [Peter](name)
-    - [jack](name)
-    - [Jim](name)
-    - [Jack](name)
-    - [Gwen](name)
-    - [peter](name)
-    - [jim](name)
-    - [Benny](name)
-    - [jake](name)
-- intent: passcode
-  examples: |
-    - [3847](passcode)
-    - [8796](passcode)
-    - [3458](passcode)
-    - [9786](passcode)
-    - [38471](passcode)
-    - [75148](passcode)
-    - [97625](passcode)
-    - [55778](passcode)
-    - [98003](passcode)
-    - [974163](passcode)
-    - [578143](passcode)
-    - [178963](passcode)
-    - [756984](passcode)
-    - [115568](passcode)
-    - [4567387](passcode)
-    - [1447852](passcode)
-    - [1445698](passcode)
-    - [9873256](passcode)
-    - [6642123](passcode)
-    - [88741258](passcode)
-    - [87569874](passcode)
-    - [12366987](passcode)
-    - [78556874](passcode)
-    - [66421235](passcode)
-    - [123456](passcode)
-    - [456123](passcode)
-    - [12347](passcode)[12347](passcode)
-    - [12347](passcode)[12347](passcode)
-- regex: passcode
-  examples: |
-    - \d[0-9]{4,8}

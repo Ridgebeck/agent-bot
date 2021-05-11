@@ -1,0 +1,30 @@
+# install cluster
+helm install \
+    --generate-name \
+    --namespace rasaxns \
+    --values values.yml \
+    rasa-x/rasa-x
+
+# check status of pods
+kubectl --namespace rasaxns get pods
+
+
+# get IP address of cluster
+kubectl --namespace rasaxns \
+    get service \
+    -l app.kubernetes.io/component=nginx \
+    -o jsonpath="{.items..status..loadBalancer..ingress[0].ip}"
+
+http://35.238.234.224:8000
+
+# get logs
+kubectl --namespace rasaxns \
+    logs rasa-x-1620679700-rabbit-0
+
+# upgrade deployment
+helm repo update
+helm upgrade \
+    --values values.yml \
+    --namespace rasaxns \
+    --reuse-values \
+    rasa-x-1620679700 rasa-x/rasa-x

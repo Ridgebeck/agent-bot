@@ -8,34 +8,32 @@ intents:
 - location:
     use_entities: true
 - greet:
-    use_entities: true
+    use_entities: []
 - goodbye:
-    use_entities: true
-- affirm:
-    use_entities: true
+    use_entities: []
+- bot_challenge:
+    use_entities: []
+- chit_chat_person:
+    use_entities: []
+- need_help:
+    use_entities: []
+- unhappy_or_stuck:
+    use_entities: []
+- praise:
+    use_entities: []
+- whats_the_next_goal:
+    use_entities: []
+- profanity:
+    use_entities: []
+- who_are_you:
+    use_entities: []
+- where_are_you:
+    use_entities: []
+- strix:
+    use_entities: []
 - deny:
     use_entities: true
-- mood_great:
-    use_entities: true
-- mood_unhappy:
-    use_entities: true
-- bot_challenge:
-    use_entities: true
-- ask_for_password:
-    use_entities: true
-- chit_chat_person:
-    use_entities: true
-- name:
-    use_entities: true
-- passcode:
-    use_entities: true
-- goal_of_the_game:
-    use_entities: true
-- are_you_russ:
-    use_entities: true
-- strix:
-    use_entities: true
-- mission:
+- affirm:
     use_entities: true
 entities:
 - location
@@ -103,13 +101,21 @@ responses:
   - text: I already know the name.
   utter_passcode_old:
   - text: I already know the passcode.
-  utter_goal_of_the_game:
-  - text: The goal is to figure out if there is an attack on the traffic control system and if so who is trying to hack the city.
+  utter_goal:
+  - text: You need to figure out which city we need to go to.
   utter_are_you_russ:
   - image: https://media.giphy.com/media/ggtVNW8GLpl6Ib8lsw/giphy.gif
     text: Of course it's me.
-  utter_mission:
-  - text: It sounds like there are some suspicous activities going on. Just this morning our systems detected an abnormality in the traffic control system and we need to figure out what is going on.
+  utter_help:
+  - text: I believe the city must be on the East Coast...if I can trust my sources.
+  utter_return_praise:
+  - text: No, you guys are the best!
+  utter_profanity_response:
+  - text: Really classy, guys...
+  utter_i_am_russ:
+  - text: I am Field Agent Russ.
+  utter_location_russ:
+  - text: I am at the Strix headquarters waiting for your location.
 actions:
 - action_verify_location
 - action_verify_name
