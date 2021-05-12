@@ -71,6 +71,7 @@ nlu:
     - have a nice day
     - see you around
     - bye bye
+    - ciao
 - intent: affirm
   examples: |
     - yes
@@ -99,6 +100,7 @@ nlu:
     - agreed
     - I agree
     - we agree
+    - ":)"
 - intent: deny
   examples: |
     - no
@@ -113,6 +115,7 @@ nlu:
     - I don't agree
     - I would not do that
     - nonono
+    - nope
 - intent: bot_challenge
   examples: |
     - are you a bot?

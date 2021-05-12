@@ -87,7 +87,7 @@ responses:
   utter_goodbye:
   - text: Bye
   utter_affirm:
-  - text: Great! Let's do it!
+  - text: great
   utter_iamnotabot:
   - image: https://media0.giphy.com/media/L3WZFMFFqgtxnXe4bf/giphy.gif
     text: Of course I am real...Could a bot do THIS?
@@ -122,9 +122,8 @@ responses:
   - text: I already know the passcode.
   utter_goal:
   - text: You need to figure out which city we need to go to.
-  utter_are_you_russ:
-  - image: https://media.giphy.com/media/ggtVNW8GLpl6Ib8lsw/giphy.gif
-    text: Of course it's me.
+  - text: I need to know the city name.
+  - text: Can you figure out the city they are targeting?
   utter_help:
   - text: I believe the city must be on the East Coast...if I can trust my sources.
   utter_motivate:
@@ -143,12 +142,15 @@ responses:
   - text: What a bunch of losers.
   - text: Why did they even hire you?
   - text: That would be a case for HR, if we had one.
+  - text: No comment.
+  - text: whatever
   utter_i_am_russ:
   - text: You know who I am.
   - text: We just talked. Don't you remember?
   - text: Do you have Alzheimers? We just talked a minute ago.
   - text: Very funny, agents.
   - text: I am still the same guy I was a minute ago.
+  - text: I am who I am.
   utter_location_russ:
   - text: I am at the Strix headquarters waiting for your location.
 actions:

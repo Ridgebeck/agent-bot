@@ -9,7 +9,17 @@ stories:
 - story: goodbye short
   steps:
   - intent: goodbye
-  - action: utter_stayhere  
+  - action: utter_stayhere
+
+- story: affirm short
+  steps:
+  - intent: affirm
+  - action: utter_affirm 
+
+- story: deny short
+  steps:
+  - intent: deny
+  - action: action_listen
 
 - story: bot_challenge short
   steps:
