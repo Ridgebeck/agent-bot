@@ -1,5 +1,6 @@
 version: "2.0"
 
+rules:
 - rule: Don't admit to being a bot
   steps:
   - intent: bot_challenge
@@ -21,7 +22,7 @@ version: "2.0"
   - intent: location
   - action: utter_location_old
 
-# rules:
+
 # - rule: Don't let the user off the hook
 #   steps:
 #   - intent: goodbye
