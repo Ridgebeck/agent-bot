@@ -245,6 +245,13 @@ nlu:
     - what should we look for?
     - what do I have to do?
     - what do we have to do?
+    - what city?
+    - what city are you talking about?
+    - which city?
+    - city?
+    - city name?
+    - a name of a city, huh?
+    - a city?
 - intent: profanity
   examples: |
     - fuck you
@@ -411,5 +418,3 @@ nlu:
     - city: [Milwaukee](location)
     - city: [Tucson](location)
     - city: [Atlanta](location)
-
-

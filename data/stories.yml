@@ -59,7 +59,16 @@ stories:
   - intent: whats_the_next_goal
   - action: utter_goal_detailed
   - intent: whats_the_next_goal
-  - action: utter_help  
+  - action: utter_help
+
+- story: whats the goal frustrated
+  steps:
+  - intent: whats_the_next_goal
+  - action: utter_goal
+  - intent: unhappy_or_stuck
+  - action: utter_goal_detailed
+  - intent: unhappy_or_stuck
+  - action: utter_help    
 
 - story: respond to profanity
   steps:
