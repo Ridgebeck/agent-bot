@@ -19,7 +19,8 @@ stories:
 - story: deny short
   steps:
   - intent: deny
-  - action: action_listen
+  - intent: affirm
+  - action: utter_affirm 
 
 - story: bot_challenge short
   steps:
