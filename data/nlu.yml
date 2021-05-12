@@ -284,6 +284,7 @@ nlu:
     - What do I have to do?
     - what is the goal?
     - what do you need from us?
+    - what do you need?
 - intent: profanity
   examples: |
     - fuck you
@@ -300,7 +301,6 @@ nlu:
     - you bastard
     - you bloody idiot
     - you bloody bastard
-    - you are so dumm
     - I hate everything about you
     - faggot
     - you are a faggot
@@ -321,6 +321,7 @@ nlu:
     - you asshat
     - hate you
     - you suck
+    - you are so dumb
 - intent: who_are_you
   examples: |
     - who are you?
@@ -466,3 +467,4 @@ nlu:
     - the city is [boston](location)
     - the location is [hamburg](location)
     - [new york](location)?
+    - [chicago](location)?
