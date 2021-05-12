@@ -52,6 +52,15 @@ stories:
   - intent: whats_the_next_goal
   - action: utter_goal
 
+- story: whats the goal multiple times
+  steps:
+  - intent: whats_the_next_goal
+  - action: utter_goal
+  - intent: whats_the_next_goal
+  - action: utter_goal_detailed
+  - intent: whats_the_next_goal
+  - action: utter_help  
+
 - story: respond to profanity
   steps:
   - intent: profanity

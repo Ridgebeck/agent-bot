@@ -124,6 +124,8 @@ responses:
   - text: You need to figure out which city we need to go to.
   - text: I need to know the city name.
   - text: Can you figure out the city they are targeting?
+  utter_goal_detailed:
+  - text: You need to use the information and figure out which city they are targeting so that we can send somebody there.
   utter_help:
   - text: I believe the city must be on the East Coast...if I can trust my sources.
   utter_motivate:
