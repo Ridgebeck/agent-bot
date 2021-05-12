@@ -29,7 +29,7 @@ stories:
 - story: stuck short
   steps:
   - intent: unhappy_or_stuck
-  - action: utter_help
+  - action: utter_motivate
 
 - story: praise short
   steps:

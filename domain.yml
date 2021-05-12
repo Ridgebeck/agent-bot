@@ -80,23 +80,42 @@ responses:
   - text: Great, carry on!
   utter_stayhere:
   - text: You are not done yet. I need your help!
+  - text: This mission is not over yet.
+  - text: We haven't finished this mission.
+  - text: Don't leave me hanging.
+  - text: This is not over yet.
   utter_goodbye:
   - text: Bye
   utter_affirm:
   - text: Great! Let's do it!
   utter_iamnotabot:
   - image: https://media0.giphy.com/media/L3WZFMFFqgtxnXe4bf/giphy.gif
-    text: What? Could a bot do THIS?
+    text: Of course I am real...Could a bot do THIS?
+  - text: I am a Field Agent. Do you think Strix would hire a machine?
+  - text: What is even real nowadays, right?! Well, I am.
+  - text: Really funny.
+  - text: We will all get replaced some day I guess.
   utter_submit:
   - text: Form has been filled!
   utter_strix:
   - text: STRIX is a global organization fighting cyber crime.
+  - text: STRIX is the agency that hired you and me. That's it.
+  - text: Didn't you pay attention during the introduction?
+  - text: Well, they are paying me. That's all I need to know.
   utter_password:
   - text: This is what I need from you geniuses.
   utter_chit_chat_agent:
-  - text: Can we focus on the case right now and chit chat later.
+  - text: Can we focus on the case right now and chit chat later?
+  - text: Focus up!
+  - text: Stop waisting everybody's time. Focus on the mission!
+  - text: Come on guys, I need you to focus.
+  - text: Let's solve this case first.
   utter_location_old:
-  - text: Location riddle was solved. - ADD SARCASTIC ANSWER HERE -
+  - text: I know the location already.
+  - text: You told me the location already.
+  - text: No need to spam city names.
+  - text: Stop sending me locations.
+  - text: Paris? London? What are you doing? I know the city already!
   utter_name_old:
   - text: I already know the name.
   utter_passcode_old:
@@ -108,12 +127,28 @@ responses:
     text: Of course it's me.
   utter_help:
   - text: I believe the city must be on the East Coast...if I can trust my sources.
+  utter_motivate:
+  - text: Come on guys, you can do it! Maybe check for a city on the East Coast.
+  - text: Don't leave me hanging, guys! Check some of the East Coast cities.
   utter_return_praise:
-  - text: No, you guys are the best!
+  - text: You guys are the best!
+  - text: I would be touched...if I had feelings.
+  - text: I know, I know.
+  - text: What a team we are!
+  - text: That's what I call chemistry.
   utter_profanity_response:
   - text: Really classy, guys...
+  - text: "..."
+  - text: "%$#& you, too."
+  - text: What a bunch of losers.
+  - text: Why did they even hire you?
+  - text: That would be a case for HR, if we had one.
   utter_i_am_russ:
-  - text: I am Field Agent Russ.
+  - text: You know who I am.
+  - text: We just talked. Don't you remember?
+  - text: Do you have Alzheimers? We just talked a minute ago.
+  - text: Very funny, agents.
+  - text: I am still the same guy I was a minute ago.
   utter_location_russ:
   - text: I am at the Strix headquarters waiting for your location.
 actions:
