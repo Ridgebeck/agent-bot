@@ -31,6 +31,11 @@ nlu:
     - Hi agent
     - hello, agent
     - Hi Russ 👋
+    - Hola amigo 👋
+    - Welcome!
+    - Hello?
+    - Hi we're here
+    - Wie geht's?
 - intent: chit_chat_person
   examples: |
     - hi
@@ -57,6 +62,9 @@ nlu:
     - how are you
     - what is your hobby?
     - whats your favorite animal?
+    - My mum is calling
+    - Will ist rain Today
+    - What is 1/2 +1/2
 - intent: goodbye
   examples: |
     - good bye
@@ -111,6 +119,11 @@ nlu:
     - Same here
     - Got it
     - :)
+    - Ok, I think I know it
+    - No worries
+    - Ok, I'm back
+    - Ok, give me one minute
+    - Yes okay
 - intent: deny
   examples: |
     - no
@@ -126,6 +139,7 @@ nlu:
     - I would not do that
     - nonono
     - nope
+    - No I don't
 - intent: bot_challenge
   examples: |
     - are you a bot?
@@ -152,6 +166,7 @@ nlu:
     - are you real
     - are you human
     - are you human?
+    - Show me a picture so I know you are saying the truth
 - intent: unhappy_or_stuck
   examples: |
     - this sucks
@@ -181,6 +196,9 @@ nlu:
     - still stuck dude
     - still stuck
     - I am stuck.
+    - Maybe I quit. I feel exhausted and I am hungry
+    - And I am lost
+    - I am hungry
 - intent: need_help
   examples: |
     - we need help
@@ -208,6 +226,12 @@ nlu:
     - Got it, where can I get more information?
     - Can you help me
     - help
+    - Any other help you can provide?
+    - Give me a hint
+    - I need more clues
+    - I need your help
+    - More hints?
+    - Need help
 - intent: praise
   examples: |
     - you are awesome
@@ -234,6 +258,7 @@ nlu:
     - you are my hero
     - you are our hero
     - awesome!
+    - Looking forward to it
 - intent: whats_the_next_goal
   examples: |
     - I don't know what to do
@@ -289,6 +314,8 @@ nlu:
     - what do you need from us?
     - what do you need?
     - what is the next step
+    - What do we need to do?
+    - Which case do I have to solve again?
 - intent: profanity
   examples: |
     - fuck you
@@ -356,6 +383,9 @@ nlu:
     - russ?
     - are you russ?
     - Are you Russ?
+    - Are you Russ.
+    - Who are you?
+    - Hi, are you American ?
 - intent: where_are_you
   examples: |
     - where are you?
@@ -477,3 +507,10 @@ nlu:
     - the solution is [New York](location)
     - [CHicago](location)?
     - location is Los Angeles
+    - Is it [San Diego](location)
+    - Is it [Los Angeles](location)?
+    - [Venice](location)
+    - I love coke. It has to be [Atlanta](location)
+    - Chikago
+    - Chikagoe
+    - [Berlin](location) Deutschland
