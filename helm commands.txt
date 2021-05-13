@@ -19,7 +19,7 @@ http://35.238.234.224:8000
 
 # get logs
 kubectl --namespace rasaxns \
-    logs rasa-x-1620679700-rabbit-0
+    logs rasa-x-1620684904-rabbit-0
 
 # upgrade deployment
 helm repo update
@@ -28,3 +28,6 @@ helm upgrade \
     --namespace rasaxns \
     --reuse-values \
     rasa-x-1620684904 rasa-x/rasa-x
+
+# delete all evicted pods
+kubectl get pod -n rasaxns | grep Evicted | awk '{print $1}' | xargs kubectl delete pod -n rasaxns
