@@ -79,10 +79,9 @@ responses:
   utter_greet:
   - text: Hi agents, pleasure to work together on this case.
   - text: Hi guys, I guess you are the support crew for this mission. Let's get it going.
+  - text: Hey guys. Great to have you on board.
   utter_did_that_help:
   - text: Did that help you?
-  utter_happy:
-  - text: Great, carry on!
   utter_stayhere:
   - text: You are not done yet. I need your help!
   - text: This mission is not over yet.
@@ -91,6 +90,8 @@ responses:
   - text: This is not over yet.
   utter_goodbye:
   - text: Bye
+  - text: 👋
+  - text: Later, guys!
   utter_affirm:
   - text: great
   - text: 👍
@@ -166,6 +167,10 @@ responses:
   - text: I am who I am.
   utter_location_russ:
   - text: I am at the Strix headquarters waiting for your location.
+  utter_happy:
+  - text: 😂
+  - text: Oh you. 😄
+  - text: 😁
 actions:
 - action_verify_location
 - action_verify_name
