@@ -36,6 +36,7 @@ nlu:
     - Hello?
     - Hi we're here
     - Wie geht's?
+    - Hi Russ
 - intent: chit_chat_person
   examples: |
     - hi
@@ -65,6 +66,16 @@ nlu:
     - My mum is calling
     - Will ist rain Today
     - What is 1/2 +1/2
+    - Sambuca?
+    - Ouzo?
+    - Rhum ?
+    - Whisky and cigar?
+    - Let's have a beer
+    - Now we can chit chat
+    - How is the day going?
+    - Hahhaahh. You should go do some stand-up comedy
+    - Did you already read the focus?
+    - How was your day?
 - intent: goodbye
   examples: |
     - good bye
@@ -124,6 +135,11 @@ nlu:
     - Ok, I'm back
     - Ok, give me one minute
     - Yes okay
+    - Just trust your instinct
+    - Thanks
+    - No problem
+    - Sure
+    - Got it 👍
 - intent: deny
   examples: |
     - no
@@ -167,6 +183,10 @@ nlu:
     - are you human
     - are you human?
     - Show me a picture so I know you are saying the truth
+    - Are you really not a bot?
+    - Are you a bot?
+    - How can you proof you are Russ?
+    - I think you are a bot
 - intent: unhappy_or_stuck
   examples: |
     - this sucks
@@ -232,6 +252,9 @@ nlu:
     - I need your help
     - More hints?
     - Need help
+    - Anything else that can help us?
+    - I know it's windy there, you poop.
+    - Can you help us with the case?
 - intent: praise
   examples: |
     - you are awesome
@@ -259,6 +282,8 @@ nlu:
     - you are our hero
     - awesome!
     - Looking forward to it
+    - No. No. YOU are the best!
+    - You make me laugh.
 - intent: whats_the_next_goal
   examples: |
     - I don't know what to do
@@ -316,6 +341,7 @@ nlu:
     - what is the next step
     - What do we need to do?
     - Which case do I have to solve again?
+    - What is the case about we need to solve?
 - intent: profanity
   examples: |
     - fuck you
@@ -405,6 +431,7 @@ nlu:
     - are you at the headquarters?
     - are you at Strix?
     - are you on the road
+    - Where are you right now?
 - intent: strix
   examples: |
     - what is [strix](strix)
@@ -422,6 +449,7 @@ nlu:
     - who are we working for
     - strix?
     - what is strix?
+    - What is strix?
 - intent: location
   examples: |
     - [Los Angeles](location)
@@ -514,3 +542,14 @@ nlu:
     - Chikago
     - Chikagoe
     - [Berlin](location) Deutschland
+    - Chikagoee
+    - Is it [Milwaukee](location)?
+    - [CHICAGO](location) [CHICAGO](location) 😊😊😊
+- intent: mood_unhappy
+  examples: |
+    - Don't talk that way to me
+    - I hate chemistry
+    - I am not helping you
+- intent: mood_great
+  examples: |
+    - Hahahaha
