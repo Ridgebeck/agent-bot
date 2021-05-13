@@ -121,9 +121,9 @@ responses:
   utter_passcode_old:
   - text: I already know the passcode.
   utter_goal:
-  - text: You need to figure out which city we need to go to.
-  - text: I need to know the city name.
-  - text: Can you figure out the city they are targeting?
+  - text: You need to figure out which city we need to go to prevent a possible cyber crime.
+  - text: I need to know the name of the city they are targeting. You need to hurry!
+  - text: Can you figure out the city they are targeting for a cyber crime. We need to send our guys there.
   utter_goal_detailed:
   - text: You need to use the information and figure out which city they are targeting so that we can send somebody there.
   utter_help:
