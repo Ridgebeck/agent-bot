@@ -1,0 +1,6 @@
+
+This chat interface is part of a new mobile game currently under development.
+In this game you become part of the agency Strix, an organization the fights cybercrime.
+You are part of a team that is supporting a Field Agent on their mission.
+You are receiving information and have to solve riddles to navigate the Field Agent through the story.
+You will communicate with the Field Agent named Russ through this chat interface.

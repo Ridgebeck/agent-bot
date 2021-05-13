@@ -27,7 +27,7 @@ class ActionVerifyLocation(Action):
         location = tracker.get_slot("location")
 
         if location.lower() == correct_answer_1.lower():
-            dispatcher.utter_message(text="{} is correct! \n We are contacting the nearest field agent. Please stand by...".format(correct_answer_1))
+            dispatcher.utter_message(text="{} is correct! \n We will send someone there. Thanks for your help.".format(correct_answer_1))
             #dispatcher.utter_message("We are contacting the nearest field agent. Please stand by...")
             return [SlotSet("solution_1", correct_answer_1)]
         else:
