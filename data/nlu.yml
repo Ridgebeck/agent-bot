@@ -178,6 +178,9 @@ nlu:
     - i don't understand it
     - i don't understand anything
     - I don't understand anything
+    - still stuck dude
+    - still stuck
+    - I am stuck.
 - intent: need_help
   examples: |
     - we need help
@@ -285,6 +288,7 @@ nlu:
     - what is the goal?
     - what do you need from us?
     - what do you need?
+    - what is the next step
 - intent: profanity
   examples: |
     - fuck you
@@ -351,6 +355,7 @@ nlu:
     - who are you
     - russ?
     - are you russ?
+    - Are you Russ?
 - intent: where_are_you
   examples: |
     - where are you?
@@ -468,3 +473,6 @@ nlu:
     - the location is [hamburg](location)
     - [new york](location)?
     - [chicago](location)?
+    - [Chicago](location)?
+    - the solution is [New York](location)
+    - [CHicago](location)?
