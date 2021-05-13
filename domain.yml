@@ -127,7 +127,9 @@ responses:
   utter_goal_detailed:
   - text: You need to use the information and figure out which city they are targeting so that we can send somebody there.
   utter_help:
-  - text: I believe the city must be on the East Coast...if I can trust my sources.
+  - text: I believe the city must be somewhere in the Midwest...if I can trust my sources.
+  - text: They call it the windy city.
+  - text: The city has lots and lots of bridges...and is close to a large lake.
   utter_motivate:
   - text: Come on guys, you can do it! Maybe check for a city on the East Coast.
   - text: Don't leave me hanging, guys! Check some of the East Coast cities.
@@ -139,8 +141,8 @@ responses:
   - text: That's what I call chemistry.
   utter_profanity_response:
   - text: Really classy, guys...
-  - text: "..."
-  - text: "%$#& you, too."
+  - text: '...'
+  - text: '%$#& you, too.'
   - text: What a bunch of losers.
   - text: Why did they even hire you?
   - text: That would be a case for HR, if we had one.

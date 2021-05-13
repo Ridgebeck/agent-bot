@@ -30,6 +30,7 @@ nlu:
     - Hallo agent
     - Hi agent
     - hello, agent
+    - Hi Russ 👋
 - intent: chit_chat_person
   examples: |
     - hi
@@ -51,6 +52,11 @@ nlu:
     - By the way what's your favorite ice cream?
     - what are you doing?
     - How are you?
+    - How are you
+    - Ice 🍨 tonight?
+    - how are you
+    - what is your hobby?
+    - whats your favorite animal?
 - intent: goodbye
   examples: |
     - good bye
@@ -101,6 +107,10 @@ nlu:
     - I agree
     - we agree
     - ":)"
+    - Ok
+    - Same here
+    - Got it
+    - :)
 - intent: deny
   examples: |
     - no
@@ -138,6 +148,10 @@ nlu:
     - Are you sure you are not a bot?
     - are you real?
     - are u real
+    - are you a bot
+    - are you real
+    - are you human
+    - are you human?
 - intent: unhappy_or_stuck
   examples: |
     - this sucks
@@ -163,6 +177,7 @@ nlu:
     - i hate this game
     - i don't understand it
     - i don't understand anything
+    - I don't understand anything
 - intent: need_help
   examples: |
     - we need help
@@ -184,6 +199,12 @@ nlu:
     - I could need some help here
     - please help us
     - can you give us a hint
+    - Anything else you know?
+    - Any more hints
+    - I need more info
+    - Got it, where can I get more information?
+    - Can you help me
+    - help
 - intent: praise
   examples: |
     - you are awesome
@@ -209,6 +230,7 @@ nlu:
     - you are a treat
     - you are my hero
     - you are our hero
+    - awesome!
 - intent: whats_the_next_goal
   examples: |
     - I don't know what to do
@@ -252,6 +274,17 @@ nlu:
     - city name?
     - a name of a city, huh?
     - a city?
+    - Which city?
+    - what is the goal again
+    - what is the goal
+    - whats the goal
+    - What is the next step?
+    - A city name?
+    - What is the case about? Are we shooting someone?
+    - What do I have to do?
+    - what is the goal?
+    - what do you need from us?
+    - what do you need?
 - intent: profanity
   examples: |
     - fuck you
@@ -268,7 +301,6 @@ nlu:
     - you bastard
     - you bloody idiot
     - you bloody bastard
-    - you are so dumm
     - I hate everything about you
     - faggot
     - you are a faggot
@@ -284,6 +316,12 @@ nlu:
     - you fucking animal
     - you fucker
     - you are a nazi
+    - Fuck you
+    - fuck you bloody
+    - you asshat
+    - hate you
+    - you suck
+    - you are so dumb
 - intent: who_are_you
   examples: |
     - who are you?
@@ -310,6 +348,9 @@ nlu:
     - Are you sure you are Agent Russ?
     - Are you sure you are Russ?
     - are you Russ?
+    - who are you
+    - russ?
+    - are you russ?
 - intent: where_are_you
   examples: |
     - where are you?
@@ -344,6 +385,8 @@ nlu:
     - ok, can you tell me a bit more about the [agency](strix)
     - who are you working for
     - who are we working for
+    - strix?
+    - what is strix?
 - intent: location
   examples: |
     - [Los Angeles](location)
@@ -418,3 +461,10 @@ nlu:
     - city: [Milwaukee](location)
     - city: [Tucson](location)
     - city: [Atlanta](location)
+    - [chicago](location)
+    - [new york](location)
+    - [boston](location)
+    - the city is [boston](location)
+    - the location is [hamburg](location)
+    - [new york](location)?
+    - [chicago](location)?

@@ -39,4 +39,4 @@ app:
     # name of the custom action server image to use
     name: "rsniklas/agent_bot_actions"
     # tag refers to the custom action server image tag
-    tag: "v1_0"
+    tag: "v1_1"
