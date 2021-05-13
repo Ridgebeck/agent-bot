@@ -27,4 +27,4 @@ helm upgrade \
     --values values.yml \
     --namespace rasaxns \
     --reuse-values \
-    rasa-x-1620679700 rasa-x/rasa-x
+    rasa-x-1620684904 rasa-x/rasa-x

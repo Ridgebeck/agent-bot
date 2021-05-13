@@ -11,7 +11,7 @@ from rasa_sdk import Action, FormValidationAction, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 from rasa_sdk.events import SlotSet
 
-correct_answer_1 = "Boston"
+correct_answer_1 = "Chicago"
 correct_answer_2 = "Jack"
 correct_answer_3 = "123456"
 
