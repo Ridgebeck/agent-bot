@@ -109,7 +109,7 @@ responses:
   utter_strix:
   - text: STRIX is a global organization fighting cyber crime.
   - text: STRIX is the agency that hired you and me. That's it.
-  - text: Didn't you pay attention during the introduction?
+  - text: Didn't you pay attention during the introduction? We fight cyber crime. You are now part of it.
   - text: Well, they are paying me. That's all I need to know.
   utter_password:
   - text: This is what I need from you geniuses.
@@ -152,12 +152,11 @@ responses:
   utter_profanity_response:
   - text: Really classy, guys...
   - text: '...'
-  - text: '%$#& you, too.'
-  - text: What a bunch of losers.
   - text: Why did they even hire you?
   - text: That would be a case for HR, if we had one.
   - text: No comment.
   - text: whatever
+  - text: not gonna respond to that
   utter_i_am_russ:
   - text: You know who I am.
   - text: We just talked. Don't you remember?
