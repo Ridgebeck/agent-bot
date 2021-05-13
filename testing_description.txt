@@ -1,8 +1,9 @@
+http://35.238.234.224:8000/guest/conversations/production/b83a465508d7461d89080d8fc1826999
 
 This chat interface is part of a new mobile game currently under development.
 In this game you become part of the agency Strix, an organization that fights cybercrime.
 You are part of a team that is supporting a Field Agent on their mission.
-You are receiving information from the headquarters and the Field AGent and have to solve riddles to help a Field Agent named Russ through the story.
+You are receiving information from the headquarters and the Field Agent and have to solve riddles to help a Field Agent named Russ through the story.
 Your communication with Russ is through this chat interface.
 
 This test scenario is very short. You have received a simple riddle to solve and have to give the answer to Russ to advance in the story.
@@ -10,7 +11,7 @@ You can also ask simple questions besides just giving the answer.
 
 The AI is in an early beta phase and is still learning. Please try to communicate with it as if you would chat with a human so that it can learn.
 
-The scenario is succesfully finished when you receive the following message:
+The scenario is successfully finished when you receive the following message:
 "XXX is correct! We will send someone there. Thanks for your help."
 
 A few examples of possible interactions:

@@ -32,9 +32,13 @@ intents:
 - strix:
     use_entities: []
 - deny:
-    use_entities: true
+    use_entities: []
 - affirm:
-    use_entities: true
+    use_entities: []
+- mood_great:
+    use_entities: []
+- mood_unhappy:
+    use_entities: []        
 entities:
 - location
 - name

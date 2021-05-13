@@ -25,14 +25,20 @@ class ActionVerifyLocation(Action):
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
         location = tracker.get_slot("location")
+        #print(location)
 
-        if location.lower() == correct_answer_1.lower():
+        if location == None:
+            dispatcher.utter_message(text="I don't think that is a city. Did you spell correctly?")
+            #print("spelling issue?")
+            return []
+        elif location.lower() == correct_answer_1.lower():
             dispatcher.utter_message(text="{} is correct! \n We will send someone there. Thanks for your help!".format(correct_answer_1))
-            #dispatcher.utter_message("We are contacting the nearest field agent. Please stand by...")
+            #print("correct location")
             return [SlotSet("solution_1", correct_answer_1)]
         else:
             dispatcher.utter_message(text="{} is wrong!".format(location))
-            return []
+            #print("wrong location")
+            return [SlotSet("location", None)]
 
 
 class ActionVerifyName(Action):
