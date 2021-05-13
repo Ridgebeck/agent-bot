@@ -1,57 +1,46 @@
 version: "2.0"
 stories:
-
 - story: greet short
   steps:
   - intent: greet
   - action: utter_greet
-
 - story: goodbye short
   steps:
   - intent: goodbye
   - action: utter_stayhere
-
 - story: affirm short
   steps:
   - intent: affirm
-  - action: utter_affirm 
-
+  - action: utter_affirm
 - story: deny short
   steps:
   - intent: deny
   - intent: affirm
-  - action: utter_affirm 
-
+  - action: utter_affirm
 - story: bot_challenge short
   steps:
   - intent: bot_challenge
   - action: utter_iamnotabot
-
 - story: chit chat short
   steps:
   - intent: chit_chat_person
   - action: utter_chit_chat_agent
-
 - story: help short
   steps:
   - intent: need_help
   - action: utter_help
-
 - story: stuck short
   steps:
   - intent: unhappy_or_stuck
   - action: utter_motivate
-
 - story: praise short
   steps:
   - intent: praise
   - action: utter_return_praise
-
 - story: whats the goal short
   steps:
   - intent: whats_the_next_goal
   - action: utter_goal
-
 - story: whats the goal multiple times
   steps:
   - intent: whats_the_next_goal
@@ -60,7 +49,6 @@ stories:
   - action: utter_goal_detailed
   - intent: whats_the_next_goal
   - action: utter_help
-
 - story: whats the goal frustrated
   steps:
   - intent: whats_the_next_goal
@@ -68,35 +56,29 @@ stories:
   - intent: unhappy_or_stuck
   - action: utter_goal_detailed
   - intent: unhappy_or_stuck
-  - action: utter_help    
-
+  - action: utter_help
 - story: respond to profanity
   steps:
   - intent: profanity
   - action: utter_profanity_response
-
 - story: who are you short
   steps:
   - intent: who_are_you
   - action: utter_i_am_russ
-
 - story: where are you short
   steps:
   - intent: where_are_you
   - action: utter_location_russ
-
 - story: strix short
   steps:
   - intent: strix
   - action: utter_strix
-
 - story: location guess correct
   steps:
   - intent: location
   - slot_was_set:
     - location: Boston
   - action: action_verify_location
-
 - story: location guess wrong then correct
   steps:
   - intent: location
@@ -106,4 +88,12 @@ stories:
   - intent: location
   - slot_was_set:
     - location: Boston
-  - action: action_verify_location 
+  - action: action_verify_location
+- story: stuck multiple times
+  steps:
+  - intent: unhappy_or_stuck
+  - action: utter_motivate
+  - intent: unhappy_or_stuck
+  - action: utter_motivate
+  - intent: unhappy_or_stuck
+  - action: utter_help

@@ -131,8 +131,9 @@ responses:
   - text: They call it the windy city.
   - text: The city has lots and lots of bridges...and is close to a large lake.
   utter_motivate:
-  - text: Come on guys, you can do it! Maybe check for a city on the East Coast.
-  - text: Don't leave me hanging, guys! Check some of the East Coast cities.
+  - text: Come on guys, you can do it! Maybe the city is somewhere in the Midwest?
+  - text: Don't leave me hanging, guys! It should be one of the largest cities in the US.
+  - text: You are close. I feel it! Check out cities close to a lake.
   utter_return_praise:
   - text: You guys are the best!
   - text: I would be touched...if I had feelings.
