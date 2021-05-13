@@ -76,6 +76,9 @@ nlu:
     - Hahhaahh. You should go do some stand-up comedy
     - Did you already read the focus?
     - How was your day?
+    - But I would like to chit chat now
+    - What are you up to?
+    - Are you from the United States?
 - intent: goodbye
   examples: |
     - good bye
@@ -140,6 +143,7 @@ nlu:
     - No problem
     - Sure
     - Got it 👍
+    - Always a pleasure
 - intent: deny
   examples: |
     - no
@@ -255,6 +259,7 @@ nlu:
     - Anything else that can help us?
     - I know it's windy there, you poop.
     - Can you help us with the case?
+    - Can you help me?
 - intent: praise
   examples: |
     - you are awesome
@@ -342,6 +347,9 @@ nlu:
     - What do we need to do?
     - Which case do I have to solve again?
     - What is the case about we need to solve?
+    - What do we have to do?
+    - So what do you need more?
+    - Which case?
 - intent: profanity
   examples: |
     - fuck you
@@ -545,6 +553,9 @@ nlu:
     - Chikagoee
     - Is it [Milwaukee](location)?
     - [CHICAGO](location) [CHICAGO](location) 😊😊😊
+    - The City ist [Los Angeles](location)
+    - It's [Chicago](location)
+    - The City is [Chicago](location) right?
 - intent: mood_unhappy
   examples: |
     - Don't talk that way to me
@@ -564,3 +575,14 @@ nlu:
     - this is too funny
     - you are funny
     - lololol
+    - Pleasure is on our side
+- intent: working_on_it
+  examples: |
+    - I think we can help you
+    - I am trying to find the city
+- intent: time_limit
+  examples: |
+    - How much time do I have?
+- intent: are_you_sure
+  examples: |
+    - Are you sure?
