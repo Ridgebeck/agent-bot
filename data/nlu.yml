@@ -476,3 +476,4 @@ nlu:
     - [Chicago](location)?
     - the solution is [New York](location)
     - [CHicago](location)?
+    - location is Los Angeles
