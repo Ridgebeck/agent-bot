@@ -38,7 +38,7 @@ intents:
 - mood_great:
     use_entities: []
 - mood_unhappy:
-    use_entities: []        
+    use_entities: []
 entities:
 - location
 - name
@@ -78,6 +78,7 @@ slots:
 responses:
   utter_greet:
   - text: Hi agents, pleasure to work together on this case.
+  - text: Hi guys, I guess you are the support crew for this mission. Let's get it going.
   utter_did_that_help:
   - text: Did that help you?
   utter_happy:
@@ -92,6 +93,9 @@ responses:
   - text: Bye
   utter_affirm:
   - text: great
+  - text: 👍
+  - text: 😎
+  - text: 😉
   utter_iamnotabot:
   - image: https://media0.giphy.com/media/L3WZFMFFqgtxnXe4bf/giphy.gif
     text: Of course I am real...Could a bot do THIS?
