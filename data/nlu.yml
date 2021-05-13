@@ -144,6 +144,8 @@ nlu:
     - Sure
     - Got it 👍
     - Always a pleasure
+    - Ok ok
+    - Seems so
 - intent: deny
   examples: |
     - no
@@ -191,6 +193,7 @@ nlu:
     - Are you a bot?
     - How can you proof you are Russ?
     - I think you are a bot
+    - And you are not a bot?
 - intent: unhappy_or_stuck
   examples: |
     - this sucks
@@ -260,6 +263,7 @@ nlu:
     - I know it's windy there, you poop.
     - Can you help us with the case?
     - Can you help me?
+    - Can you help us a bit?
 - intent: praise
   examples: |
     - you are awesome
