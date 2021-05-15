@@ -39,6 +39,12 @@ intents:
     use_entities: []
 - mood_unhappy:
     use_entities: []
+- time_limit:
+    use_entities: true
+- are_you_sure:
+    use_entities: true
+- working_on_it:
+    use_entities: true
 entities:
 - location
 - name

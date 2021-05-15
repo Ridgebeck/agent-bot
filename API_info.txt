@@ -1,0 +1,17 @@
+# updating values.yml, add following text via nano values.yml
+rasa:
+  additionalChannelCredentials:
+    rest:
+
+# upgrade deployment
+helm repo update
+helm upgrade \
+    --values values.yml \
+    --namespace rasaxns \
+    --reuse-values \
+    rasa-x-1620684904 rasa-x/rasa-x
+
+# API URL - POST
+http://35.238.234.224:8000/webhooks/rest/webhook
+# body
+{"sender": "me", "message": "London"}
