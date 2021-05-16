@@ -37,6 +37,8 @@ nlu:
     - Hi we're here
     - Wie geht's?
     - Hi Russ
+    - Hi, Russ!
+    - Hi there!
 - intent: chit_chat_person
   examples: |
     - hi
@@ -194,6 +196,7 @@ nlu:
     - How can you proof you are Russ?
     - I think you are a bot
     - And you are not a bot?
+    - Are you abot?
 - intent: unhappy_or_stuck
   examples: |
     - this sucks
@@ -264,6 +267,7 @@ nlu:
     - Can you help us with the case?
     - Can you help me?
     - Can you help us a bit?
+    - More hints
 - intent: praise
   examples: |
     - you are awesome
@@ -354,6 +358,7 @@ nlu:
     - What do we have to do?
     - So what do you need more?
     - Which case?
+    - what‘s next?
 - intent: profanity
   examples: |
     - fuck you
@@ -560,6 +565,10 @@ nlu:
     - The City ist [Los Angeles](location)
     - It's [Chicago](location)
     - The City is [Chicago](location) right?
+    - [Germany](location)
+    - [Salzburg](location)
+    - [Heilbronn](location)
+    - [Frankfurt](location)
 - intent: mood_unhappy
   examples: |
     - Don't talk that way to me
