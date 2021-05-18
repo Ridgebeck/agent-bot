@@ -39,6 +39,8 @@ nlu:
     - Hi Russ
     - Hi, Russ!
     - Hi there!
+    - hi
+    - hey russ
 - intent: chit_chat_person
   examples: |
     - where do you live?
@@ -81,6 +83,7 @@ nlu:
     - What are you up to?
     - Are you from the United States?
     - what is your favorite movie
+    - whats 1 + 1
 - intent: goodbye
   examples: |
     - good bye
@@ -149,6 +152,7 @@ nlu:
     - Ok ok
     - Seems so
     - I think we can help you
+    - great
 - intent: deny
   examples: |
     - no
@@ -363,6 +367,7 @@ nlu:
     - So what do you need more?
     - Which case?
     - what‘s next?
+    - whats next
 - intent: profanity
   examples: |
     - fuck you
@@ -575,6 +580,7 @@ nlu:
     - [Heilbronn](city)
     - [Frankfurt](city)
     - Is it [Chicago](city)?
+    - ok, [Chicago](city)?
 - intent: mood_unhappy
   examples: |
     - Don't talk that way to me
@@ -639,7 +645,7 @@ nlu:
     - [fourth](street) & [Van Ness Avenue](street)
     - [fifth](street)
     - [sixth](street) + [Polk](street)
-    - [seventh](street) 
+    - [seventh](street)
     - [eight](street) and [Fillmore](street)
     - [ninth](street)
     - [tenth](street) & [Embarcadero](street)
@@ -875,3 +881,14 @@ nlu:
     - [Mission Street](street)
     - [Folsom St](street)
     - [Dolores St](street)
+    - [ashbury st](street)
+    - [humboldt blvd](street)
+    - [north street](street)
+    - [north st](street)
+    - [ashbury street](street)
+    - [Ashbury street](street)
+    - [Ashbury St](street)
+    - [Park hill Ave](street)
+    - [Waller St](street)
+    - [14th street](street)
+    - [Castro street](street)
