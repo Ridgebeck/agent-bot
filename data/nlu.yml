@@ -581,6 +581,8 @@ nlu:
     - Don't talk that way to me
     - I hate chemistry
     - I am not helping you
+    - I don't like that
+    - this is dumb
 - intent: mood_great
   examples: |
     - Hahahaha
