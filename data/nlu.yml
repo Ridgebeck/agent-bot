@@ -81,6 +81,7 @@ nlu:
     - But I would like to chit chat now
     - What are you up to?
     - Are you from the United States?
+    - what is your favorite movie
 - intent: goodbye
   examples: |
     - good bye
@@ -164,6 +165,7 @@ nlu:
     - nonono
     - nope
     - No I don't
+    - No
 - intent: bot_challenge
   examples: |
     - are you a bot?
@@ -197,6 +199,7 @@ nlu:
     - I think you are a bot
     - And you are not a bot?
     - Are you abot?
+    - you sound like a bot
 - intent: unhappy_or_stuck
   examples: |
     - this sucks
@@ -268,6 +271,7 @@ nlu:
     - Can you help me?
     - Can you help us a bit?
     - More hints
+    - Any hints?
 - intent: praise
   examples: |
     - you are awesome
@@ -429,6 +433,7 @@ nlu:
     - Are you Russ.
     - Who are you?
     - Hi, are you American ?
+    - is your name  Russ?
 - intent: where_are_you
   examples: |
     - where are you?
@@ -569,6 +574,7 @@ nlu:
     - [Salzburg](location)
     - [Heilbronn](location)
     - [Frankfurt](location)
+    - Is it [Chicago](location)?
 - intent: mood_unhappy
   examples: |
     - Don't talk that way to me
@@ -599,3 +605,6 @@ nlu:
 - intent: are_you_sure
   examples: |
     - Are you sure?
+- intent: ask_math
+  examples: |
+    - whats 1 + 1
