@@ -68,27 +68,27 @@ stories:
 - story: where are you short
   steps:
   - intent: where_are_you
-  - action: utter_location_russ
+  - action: utter_city_russ
 - story: strix short
   steps:
   - intent: strix
   - action: utter_strix
-- story: location guess correct
+- story: city guess correct
   steps:
-  - intent: location
+  - intent: city
   - slot_was_set:
-    - location: Boston
-  - action: action_verify_location
-- story: location guess wrong then correct
+    - city: Boston
+  - action: action_verify_city
+- story: city guess wrong then correct
   steps:
-  - intent: location
+  - intent: city
   - slot_was_set:
-    - location: New York
-  - action: action_verify_location
-  - intent: location
+    - city: New York
+  - action: action_verify_city
+  - intent: city
   - slot_was_set:
-    - location: Boston
-  - action: action_verify_location
+    - city: Boston
+  - action: action_verify_city
 - story: stuck multiple times
   steps:
   - intent: unhappy_or_stuck

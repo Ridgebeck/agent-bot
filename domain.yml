@@ -5,7 +5,7 @@ session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
 intents:
-- location:
+- city:
     use_entities: true
 - greet:
     use_entities: []
@@ -46,17 +46,16 @@ intents:
 - working_on_it:
     use_entities: true
 entities:
-- location
-- name
+- city
+- street
 - passcode
-- strix
 slots:
-  location:
+  city:
     type: rasa.shared.core.slots.TextSlot
     initial_value: null
     auto_fill: true
     influence_conversation: false
-  name:
+  street:
     type: rasa.shared.core.slots.TextSlot
     initial_value: null
     auto_fill: true
@@ -66,12 +65,12 @@ slots:
     initial_value: null
     auto_fill: true
     influence_conversation: false
-  solution_1:
+  solution_city:
     type: rasa.shared.core.slots.TextSlot
     initial_value: null
     auto_fill: false
     influence_conversation: true
-  solution_2:
+  solution_street:
     type: rasa.shared.core.slots.TextSlot
     initial_value: null
     auto_fill: false
@@ -125,11 +124,11 @@ responses:
   - text: Stop waisting everybody's time. Focus on the mission!
   - text: Come on guys, I need you to focus.
   - text: Let's solve this case first.
-  utter_location_old:
-  - text: I know the location already.
-  - text: You told me the location already.
+  utter_city_old:
+  - text: I know the city already.
+  - text: You told me the city already.
   - text: No need to spam city names.
-  - text: Stop sending me locations.
+  - text: Stop sending me citys.
   - text: Paris? London? What are you doing? I know the city already!
   utter_name_old:
   - text: I already know the name.
@@ -170,14 +169,14 @@ responses:
   - text: Very funny, agents.
   - text: I am still the same guy I was a minute ago.
   - text: I am who I am.
-  utter_location_russ:
-  - text: I am at the Strix headquarters waiting for your location.
+  utter_city_russ:
+  - text: I am at the Strix headquarters waiting for your city.
   utter_happy:
   - text: 😂
   - text: Oh you. 😄
   - text: 😁
 actions:
-- action_verify_location
+- action_verify_city
 - action_verify_name
 - action_verify_passcode
 forms: {}

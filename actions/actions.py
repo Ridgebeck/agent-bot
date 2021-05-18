@@ -15,30 +15,30 @@ correct_answer_1 = "Chicago"
 correct_answer_2 = "Jack"
 correct_answer_3 = "123456"
 
-class ActionVerifyLocation(Action):
+class ActionVerifycity(Action):
 
     def name(self) -> Text:
-        return "action_verify_location"
+        return "action_verify_city"
 
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
-        location = tracker.get_slot("location")
-        #print(location)
+        city = tracker.get_slot("city")
+        #print(city)
 
-        if location == None:
+        if city == None:
             dispatcher.utter_message(text="I don't think that is a city. Did you spell correctly?")
             #print("spelling issue?")
             return []
-        elif location.lower() == correct_answer_1.lower():
+        elif city.lower() == correct_answer_1.lower():
             dispatcher.utter_message(text="{} is correct! \n We will send someone there. Thanks for your help!".format(correct_answer_1))
-            #print("correct location")
+            #print("correct city")
             return [SlotSet("solution_1", correct_answer_1)]
         else:
-            dispatcher.utter_message(text="{} is wrong!".format(location))
-            #print("wrong location")
-            return [SlotSet("location", None)]
+            dispatcher.utter_message(text="{} is wrong!".format(city))
+            #print("wrong city")
+            return [SlotSet("city", None)]
 
 
 class ActionVerifyName(Action):
@@ -86,7 +86,7 @@ class ActionVerifyPasscode(Action):
 
 #     # @staticmethod
 #     # def required_slots(tracker: Tracker) -> List[Text]:        
-#     #     return ["facility_type", "location"]
+#     #     return ["facility_type", "city"]
 
 #     def validate_slot_facility_type(
 #         self,
