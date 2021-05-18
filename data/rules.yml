@@ -18,8 +18,17 @@ rules:
   steps:
   - intent: city
   - action: utter_city_old
-- rule: Verify input if intent is street and riddle has not been solved
+- rule: Respond if intent is street and city riddle has not been solved
   condition:
+  - slot_was_set:
+    - solution_city: null
+  steps:
+  - intent: street
+  - action: utter_city_not_street
+- rule: Verify input if intent is street and city riddle has been solved
+  condition:
+  - slot_was_set:
+    - solution_city: filled
   - slot_was_set:
     - solution_street: null
   steps:

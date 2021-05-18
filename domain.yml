@@ -132,6 +132,9 @@ responses:
   - text: No need to spam city names.
   - text: Stop sending me citys.
   - text: Paris? London? What are you doing? I know the city already!
+  utter_city_not_street:
+  - text: I am looking for a city, not a street name.
+  - text: You need to look for a city, not a street.
   utter_name_old:
   - text: I already know the name.
   utter_passcode_old:

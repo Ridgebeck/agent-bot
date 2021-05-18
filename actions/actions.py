@@ -50,14 +50,17 @@ class ActionVerifyStreet(Action):
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
-        street = tracker.get_slot("street")
+        #street = tracker.get_slot("street")
 
-        if street.lower() == correct_answer_street.lower():
-            dispatcher.utter_message(text="{} is correct!".format(correct_answer_street))
-            return [SlotSet("solution_street", correct_answer_street)]
-        else:
-            dispatcher.utter_message(text="{} is wrong!".format(street))
-            return []
+        dispatcher.utter_message("This is a street name!")
+        return []
+
+        # if street.lower() == correct_answer_street.lower():
+        #     dispatcher.utter_message(text="{} is correct!".format(correct_answer_street))
+        #     return [SlotSet("solution_street", correct_answer_street)]
+        # else:
+        #     dispatcher.utter_message(text="{} is wrong!".format(street))
+        #     return []
 
 
 class ActionVerifyPasscode(Action):
