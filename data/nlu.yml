@@ -886,7 +886,7 @@ nlu:
 # - synonym: boulevard
 #   examples: |
 #     - blvd
-- lookup: street
-  examples: |
-    - street
-    - st   
+# - lookup: street
+#   examples: |
+#     - street
+#     - st   
