@@ -627,6 +627,8 @@ nlu:
 - intent: are_you_sure
   examples: |
     - Are you sure?
-- intent: ask_math
-  examples: |
-    - whats 1 + 1
+    - Are you really sure?
+    - you sure?
+    - Do you mean that?
+    - Are you certain?
+    - Are you sure about that?

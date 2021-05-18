@@ -11,8 +11,8 @@ from rasa_sdk import Action, FormValidationAction, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 from rasa_sdk.events import SlotSet
 
-correct_answer_1 = "Chicago"
-correct_answer_2 = "Jack"
+correct_answer_city = "Chicago"
+correct_answer_street = "Oak Street"
 correct_answer_3 = "123456"
 
 class ActionVerifycity(Action):
@@ -31,32 +31,32 @@ class ActionVerifycity(Action):
             dispatcher.utter_message(text="I don't think that is a city. Did you spell correctly?")
             #print("spelling issue?")
             return []
-        elif city.lower() == correct_answer_1.lower():
-            dispatcher.utter_message(text="{} is correct! \n We will send someone there. Thanks for your help!".format(correct_answer_1))
+        elif city.lower() == correct_answer_city.lower():
+            dispatcher.utter_message(text="{} is correct! \n We will send someone there. Thanks for your help!".format(correct_answer_city))
             #print("correct city")
-            return [SlotSet("solution_1", correct_answer_1)]
+            return [SlotSet("solution_city", correct_answer_city)]
         else:
             dispatcher.utter_message(text="{} is wrong!".format(city))
             #print("wrong city")
             return [SlotSet("city", None)]
 
 
-class ActionVerifyName(Action):
+class ActionVerifyStreet(Action):
 
     def name(self) -> Text:
-        return "action_verify_name"
+        return "action_verify_street"
 
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
-        name = tracker.get_slot("name")
+        street = tracker.get_slot("street")
 
-        if name.lower() == correct_answer_2.lower():
-            dispatcher.utter_message(text="{} is correct!".format(correct_answer_2))
-            return [SlotSet("solution_2", correct_answer_2)]
+        if street.lower() == correct_answer_street.lower():
+            dispatcher.utter_message(text="{} is correct!".format(correct_answer_street))
+            return [SlotSet("solution_street", correct_answer_street)]
         else:
-            dispatcher.utter_message(text="{} is wrong!".format(name))
+            dispatcher.utter_message(text="{} is wrong!".format(street))
             return []
 
 

@@ -7,6 +7,8 @@ session_config:
 intents:
 - city:
     use_entities: true
+- street:
+    use_entities: true    
 - greet:
     use_entities: []
 - goodbye:
@@ -177,7 +179,7 @@ responses:
   - text: 😁
 actions:
 - action_verify_city
-- action_verify_name
+- action_verify_street
 - action_verify_passcode
 forms: {}
 e2e_actions: []
