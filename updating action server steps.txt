@@ -1,6 +1,6 @@
 # 1. change logic in actions.py
 
-# 2. start Docker engine
+# 2. start Docker engine (Docker windows program)
 
 # 3. create new docker image with higher tag number (aka version number, e.g. v1_3)
 docker build . -t rsniklas/agent_bot_actions:v1_3
@@ -9,11 +9,11 @@ docker build . -t rsniklas/agent_bot_actions:v1_3
 docker push rsniklas/agent_bot_actions:v1_3
 
 # 5. update tag number (aka version number, e.g. v1_3) in values.yml file on GCP cluster
-go into GCP console
-connect to cluster via Cloud Shell
-open values.yml file via command "nano values.yml"
-change tag to latest revision (e.g. v1_3)
-close editor and save changes
+# 5.1 go into GCP console
+# 5.2 connect to cluster via Cloud Shell
+# 5.3 open values.yml file via command "nano values.yml"
+# 5.4 change tag to latest revision (e.g. v1_3)
+# 5.5 close editor and save changes
 
 # 6. upgrade cluster deployment
 helm repo update
@@ -25,3 +25,6 @@ helm upgrade \
  
 # 7. check that everything is okay
 kubectl --namespace rasaxns get pods
+
+# 8. delete all evicted pods if necessary
+kubectl get pod -n rasaxns | grep Evicted | awk '{print $1}' | xargs kubectl delete pod -n rasaxns
