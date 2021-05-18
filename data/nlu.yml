@@ -866,6 +866,7 @@ nlu:
     - [Frederick St] (street)
     - [Masonic Ave] (street)
     - [Geary Blvd] (street)
+    - [Geary Boulevard] (street)
     - [Presidio Ave] (street)
     - [California St] (street)
     - [Broadway] (street)
@@ -876,3 +877,15 @@ nlu:
     - [Mission Street] (street)
     - [Folsom St] (street)
     - [Dolores St] (street)
+- synonym: street
+  examples: |
+    - street
+    - st
+- synonym: avenue
+  examples: |
+    - avenue
+    - ave
+- synonym: boulevard
+  examples: |
+    - boulevard
+    - blvd
