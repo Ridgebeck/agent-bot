@@ -4,13 +4,15 @@ rules:
   steps:
   - intent: bot_challenge
   - action: utter_iamnotabot
-- rule: Run custom action to verify the input if intent is city
+
+- rule: Verify the input if intent is city and city riddle has not been solved
   condition:
   - slot_was_set:
     - solution_city: null
   steps:
   - intent: city
   - action: action_verify_city
+
 - rule: Utter that city is known if intent is city but city riddle has been solved
   condition:
   - slot_was_set:
@@ -18,6 +20,7 @@ rules:
   steps:
   - intent: city
   - action: utter_city_old
+
 - rule: Respond if intent is street and city riddle has not been solved
   condition:
   - slot_was_set:
@@ -25,6 +28,7 @@ rules:
   steps:
   - intent: street
   - action: utter_city_not_street
+
 - rule: Verify input if intent is street and city riddle has been solved
   condition:
   - slot_was_set:
