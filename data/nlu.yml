@@ -41,7 +41,6 @@ nlu:
     - Hi there!
 - intent: chit_chat_person
   examples: |
-    - hi
     - where do you live?
     - how old are you?
     - do you like gummy bears
@@ -836,7 +835,7 @@ nlu:
     - [ridge avenue] (street)
     - [forest avenue] (street)
     - [sunset avenue] (street)
-    - [broad avenue] (street)   
+    - [broad avenue] (street)
     - [main ave] (street)
     - [park ave] (street)
     - [oak ave] (street)
@@ -871,7 +870,6 @@ nlu:
     - [California St] (street)
     - [Broadway] (street)
     - [broadway] (street)
-    - [Frederick St] (street)
     - [Bush St] (street)
     - [Mission St] (street)
     - [Mission Street] (street)
@@ -879,13 +877,10 @@ nlu:
     - [Dolores St] (street)
 - synonym: street
   examples: |
-    - street
     - st
 - synonym: avenue
   examples: |
-    - avenue
     - ave
 - synonym: boulevard
   examples: |
-    - boulevard
     - blvd
