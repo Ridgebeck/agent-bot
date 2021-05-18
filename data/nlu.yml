@@ -149,6 +149,7 @@ nlu:
     - Always a pleasure
     - Ok ok
     - Seems so
+    - I think we can help you
 - intent: deny
   examples: |
     - no
@@ -597,11 +598,30 @@ nlu:
     - Pleasure is on our side
 - intent: working_on_it
   examples: |
-    - I think we can help you
     - I am trying to find the city
+    - I am working on it
+    - We are working on it
+    - working on it
+    - let us do our magic
+    - let me do my magic
+    - we are still searching
+    - we are still working on it
+    - I am still searching
+    - I am still working on it
 - intent: time_limit
   examples: |
     - How much time do I have?
+    - How much time to we have?
+    - Is it urgent?
+    - Do we have 30min?
+    - How long is this mission?
+    - How long is this game?
+    - How long does it take?
+    - Does this game take long?
+    - Does this mission take long?
+    - How long do we have?
+    - Is this mission long?
+    - Is there a time limit?
 - intent: are_you_sure
   examples: |
     - Are you sure?
