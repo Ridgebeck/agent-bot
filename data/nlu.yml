@@ -877,15 +877,16 @@ nlu:
     - [Mission Street] (street)
     - [Folsom St] (street)
     - [Dolores St] (street)
-- synonym: street
+# - synonym: street
+#   examples: |
+#     - st
+# - synonym: avenue
+#   examples: |
+#     - ave
+# - synonym: boulevard
+#   examples: |
+#     - blvd
+- lookup: street
   examples: |
     - street
-    - st
-- synonym: avenue
-  examples: |
-    - avenue
-    - ave
-- synonym: boulevard
-  examples: |
-    - boulevard
-    - blvd
+    - st   
