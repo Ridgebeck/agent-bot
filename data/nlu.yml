@@ -892,3 +892,9 @@ nlu:
     - [Waller St](street)
     - [14th street](street)
     - [Castro street](street)
+- synonym: street
+  examples: |
+    - st
+- synonym: first
+  examples: |
+    - 1st

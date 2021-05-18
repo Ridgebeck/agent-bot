@@ -38,3 +38,13 @@ rules:
   steps:
   - intent: street
   - action: action_verify_street
+
+- rule: Respond if intent is street but street riddle has been solved
+  condition:
+  - slot_was_set:
+    - solution_city: filled
+  - slot_was_set:
+    - solution_street: filled
+  steps:
+  - intent: street
+  - action: utter_street_old  

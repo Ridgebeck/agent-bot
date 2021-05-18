@@ -8,7 +8,7 @@ intents:
 - city:
     use_entities: true
 - street:
-    use_entities: true    
+    use_entities: true
 - greet:
     use_entities: []
 - goodbye:
@@ -51,16 +51,17 @@ entities:
 - city
 - street
 - passcode
+- strix
 slots:
   city:
     type: rasa.shared.core.slots.TextSlot
     initial_value: null
     auto_fill: true
     influence_conversation: false
-  street:
+  last_street_guess:
     type: rasa.shared.core.slots.TextSlot
     initial_value: null
-    auto_fill: true
+    auto_fill: false
     influence_conversation: false
   passcode:
     type: rasa.shared.core.slots.TextSlot
@@ -132,6 +133,9 @@ responses:
   - text: No need to spam city names.
   - text: Stop sending me citys.
   - text: Paris? London? What are you doing? I know the city already!
+  utter_street_old:
+  - text: I know the street already.
+  - text: You told me the intersection already.
   utter_city_not_street:
   - text: I am looking for a city, not a street name.
   - text: You need to look for a city, not a street.
