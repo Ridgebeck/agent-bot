@@ -107,7 +107,7 @@ class ActionVerifyPassword(Action):
             return [SlotSet("solution_password", correct_answer_password)]
         else:
             dispatcher.utter_message(text="{} is wrong!".format(passcode))
-            return []
+            return [SlotSet("password", None)]
 
        
 # class FacilityForm(FormValidationAction):
