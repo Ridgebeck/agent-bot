@@ -9,6 +9,8 @@ intents:
     use_entities: true
 - street:
     use_entities: true
+- password:
+    use_entities: true    
 - greet:
     use_entities: []
 - goodbye:
@@ -50,7 +52,7 @@ intents:
 entities:
 - city
 - street
-- passcode
+- password
 - strix
 slots:
   city:
@@ -63,7 +65,7 @@ slots:
     initial_value: null
     auto_fill: false
     influence_conversation: false
-  passcode:
+  password:
     type: rasa.shared.core.slots.TextSlot
     initial_value: null
     auto_fill: true
@@ -78,7 +80,7 @@ slots:
     initial_value: null
     auto_fill: false
     influence_conversation: true
-  solution_3:
+  solution_password:
     type: rasa.shared.core.slots.TextSlot
     initial_value: null
     auto_fill: false
@@ -131,11 +133,20 @@ responses:
   - text: I know the city already.
   - text: You told me the city already.
   - text: No need to spam city names.
-  - text: Stop sending me citys.
+  - text: Stop sending me cities.
   - text: Paris? London? What are you doing? I know the city already!
   utter_street_old:
   - text: I know the street already.
   - text: You told me the intersection already.
+  utter_password_old:
+  - text: I know the password already.
+  - text: You told me the code already.
+  - text: You told me the password already.
+  - text: I got it already.
+  utter_no_password_needed:
+  - text: I don't know how that should help me.
+  - text: Is this a code or something? I don't need that right now.
+  - text: I don't think you are focusing on what I need right now.
   utter_city_not_street:
   - text: I am looking for a city, not a street name.
   - text: You need to look for a city, not a street.

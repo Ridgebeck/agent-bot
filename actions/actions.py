@@ -12,7 +12,7 @@ from rasa_sdk.executor import CollectingDispatcher
 from rasa_sdk.events import SlotSet
 
 correct_answer_city = "Chicago"
-correct_answer_last_street_guess = "First Street"
+correct_answer_street_1 = "First Street"
 correct_answer_street_2 = "Oak Street"
 correct_answer_3 = "123456"
 
@@ -50,23 +50,21 @@ class ActionVerifyStreet(Action):
 
         # get slot of last single street guess
         last_street_guess = tracker.get_slot("last_street_guess")
-        print("last_street_guess: {} ".format(last_street_guess))
 
         # list for detected street values
         streets = []
 
-        # go through all entities    
+        # go through all entities from last message   
         for entity in tracker.latest_message['entities']:
             # check if entity was detected as a street and append text value
             if entity['entity'] == 'street':
                 streets.append(entity['value'])
 
-        print(streets)
         # validate if solution is correct if two streets were given (both have to be correct)
-        if len(streets) == 2:            
-            if streets[0].lower() == correct_answer_last_street_guess.lower() and streets[1].lower() == correct_answer_street_2.lower() or streets[1].lower() == correct_answer_last_street_guess.lower() and streets[0].lower() == correct_answer_street_2.lower():
+        if len(streets) == 2:
+            if streets[0].lower() == correct_answer_street_1.lower() and streets[1].lower() == correct_answer_street_2.lower() or streets[1].lower() == correct_answer_street_1.lower() and streets[0].lower() == correct_answer_street_2.lower():
                 dispatcher.utter_message(text="Two street names were given: {} and {} - they are correct!".format(streets[0], streets[1]))
-                return [SlotSet("solution_street", "{} & {}".format(correct_answer_last_street_guess, correct_answer_street_2))]
+                return [SlotSet("solution_street", "{} & {}".format(correct_answer_street_1, correct_answer_street_2))]
             else:
                 dispatcher.utter_message(text="Two street names were given: {} and {} - they are NOT correct!".format(streets[0], streets[1]))
                 return [SlotSet("last_street_guess", None)]
@@ -80,9 +78,9 @@ class ActionVerifyStreet(Action):
             # if there was a saved street name
             else:
                 streets.append(last_street_guess)
-                if streets[0].lower() == correct_answer_last_street_guess.lower() and streets[1].lower() == correct_answer_street_2.lower() or streets[1].lower() == correct_answer_last_street_guess.lower() and streets[0].lower() == correct_answer_street_2.lower():
+                if streets[0].lower() == correct_answer_street_1.lower() and streets[1].lower() == correct_answer_street_2.lower() or streets[1].lower() == correct_answer_street_1.lower() and streets[0].lower() == correct_answer_street_2.lower():
                     dispatcher.utter_message(text="Two street names were given: {} and {} - they are correct!".format(streets[0], streets[1]))
-                    return [SlotSet("solution_street", "{} & {}".format(correct_answer_last_street_guess, correct_answer_street_2))]
+                    return [SlotSet("solution_street", "{} & {}".format(correct_answer_street_1, correct_answer_street_2))]
                 else:
                     dispatcher.utter_message(text="Two street names were given: {} and {} - they are NOT correct!".format(streets[0], streets[1]))
                     return [SlotSet("last_street_guess", None)]
@@ -91,28 +89,6 @@ class ActionVerifyStreet(Action):
         else:
             dispatcher.utter_message(text="I don't get it. Can you please specify one specific intersection of two streets?")
             return [SlotSet("last_street_guess", None)]
-
-
-
-        # check if solution is correct once two streets have been entered
-
-
-        # first street correct
-        #return [SlotSet("last_street_guess", correct_answer_last_street_guess), SlotSet("street_2", None)]
-        
-        # second street correct
-        #return [SlotSet("last_street_guess", None), SlotSet("street_2", correct_answer_street_2)]
-
-        # first and second street correct
-        #return [SlotSet("last_street_guess", correct_answer_last_street_guess), SlotSet("street_2", correct_answer_street_2)]
-
-        
-        # if street.lower() == correct_answer_street.lower():
-        #     dispatcher.utter_message(text="{} is correct!".format(correct_answer_street))
-        #     return [SlotSet("solution_street", correct_answer_street)]
-        # else:
-        #     dispatcher.utter_message(text="{} is wrong!".format(street))
-        #     return []
 
 
 class ActionVerifyPasscode(Action):

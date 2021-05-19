@@ -47,4 +47,36 @@ rules:
     - solution_street: filled
   steps:
   - intent: street
-  - action: utter_street_old  
+  - action: utter_street_old
+
+- rule: Verify input if intent is password and street riddle has been solved
+  condition:
+  - slot_was_set:
+    - solution_city: filled
+  - slot_was_set:
+    - solution_street: filled
+  - slot_was_set:
+    - solution_password: null    
+  steps:
+  - intent: street
+  - action: action_verify_password
+
+- rule: Respond if intent is password but password riddle has been solved
+  condition:
+  - slot_was_set:
+    - solution_city: filled
+  - slot_was_set:
+    - solution_street: filled
+  - slot_was_set:
+    - solution_password: filled    
+  steps:
+  - intent: street
+  - action: utter_password_old
+
+- rule: Respond if intent is password and street riddle has not been solved
+  condition:
+  - slot_was_set:
+    - solution_street: null
+  steps:
+  - intent: password
+  - action: utter_no_password_needed
