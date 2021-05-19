@@ -892,9 +892,45 @@ nlu:
     - [Waller St](street)
     - [14th street](street)
     - [Castro street](street)
-- synonym: street
-  examples: |
-    - st
-- synonym: first
+- synonym: first street
   examples: |
     - 1st
+    - first
+    - First
+    - FIRST
+    - 1st street
+    - 1st Street
+    - 1st STREET
+    - 1st st
+    - 1st St
+    - 1st ST
+    - 1st Str
+    - first st
+    - first St
+    - first ST
+    - first Str
+    - First st
+    - First St
+    - First ST
+    - First Str
+    - FIRST st
+    - FIRST St
+    - FIRST ST
+    - FIRST Str
+- synonym: oak street
+  examples: |
+    - oak
+    - Oak
+    - OAK
+    - oak st
+    - oak St
+    - oak ST
+    - oak Str
+    - Oak st
+    - Oak St
+    - Oak ST
+    - Oak Str
+    - OAK st
+    - OAK St
+    - OAK ST
+    - OAK Str    
