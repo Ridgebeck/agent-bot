@@ -10,7 +10,7 @@ intents:
 - street:
     use_entities: true
 - password:
-    use_entities: true    
+    use_entities: true
 - greet:
     use_entities: []
 - goodbye:
@@ -198,6 +198,6 @@ responses:
 actions:
 - action_verify_city
 - action_verify_street
-- action_verify_passcode
+- action_verify_password
 forms: {}
 e2e_actions: []

@@ -14,7 +14,7 @@ from rasa_sdk.events import SlotSet
 correct_answer_city = "Chicago"
 correct_answer_street_1 = "First Street"
 correct_answer_street_2 = "Oak Street"
-correct_answer_3 = "123456"
+correct_answer_password = "123456"
 
 class ActionVerifycity(Action):
 
@@ -91,20 +91,20 @@ class ActionVerifyStreet(Action):
             return [SlotSet("last_street_guess", None)]
 
 
-class ActionVerifyPasscode(Action):
+class ActionVerifyPassword(Action):
 
     def name(self) -> Text:
-        return "action_verify_passcode"
+        return "action_verify_password"
 
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
-        passcode = tracker.get_slot("passcode")
+        passcode = tracker.get_slot("password")
 
-        if passcode == correct_answer_3:
-            dispatcher.utter_message(text="{} is correct!".format(correct_answer_3))
-            return [SlotSet("solution_3", correct_answer_3)]
+        if passcode == correct_answer_password:
+            dispatcher.utter_message(text="{} is correct!".format(correct_answer_password))
+            return [SlotSet("solution_password", correct_answer_password)]
         else:
             dispatcher.utter_message(text="{} is wrong!".format(passcode))
             return []

@@ -58,7 +58,7 @@ rules:
   - slot_was_set:
     - solution_password: null    
   steps:
-  - intent: street
+  - intent: password
   - action: action_verify_password
 
 - rule: Respond if intent is password but password riddle has been solved
@@ -70,7 +70,7 @@ rules:
   - slot_was_set:
     - solution_password: filled    
   steps:
-  - intent: street
+  - intent: password
   - action: utter_password_old
 
 - rule: Respond if intent is password and street riddle has not been solved
