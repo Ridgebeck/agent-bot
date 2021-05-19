@@ -102,6 +102,12 @@ class ActionVerifyPassword(Action):
 
         passcode = tracker.get_slot("password")
 
+        # remove everything thats not a digit
+        passcode = "".join(filter(str.isdigit, passcode))       
+        print(passcode)
+
+        # check if length is correct
+
         if passcode == correct_answer_password:
             dispatcher.utter_message(text="{} is correct!".format(correct_answer_password))
             return [SlotSet("solution_password", correct_answer_password)]
