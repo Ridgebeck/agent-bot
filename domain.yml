@@ -87,114 +87,114 @@ slots:
     influence_conversation: true
 responses:
   utter_greet:
-  - text: Hi agents, pleasure to work together on this case.
-  - text: Hi guys, I guess you are the support crew for this mission. Let's get it going.
-  - text: Hey guys. Great to have you on board.
+  - text: "Hi agents, pleasure to work together on this case."
+  - text: "Hi guys, I guess you are the support crew for this mission. Let's get it going."
+  - text: "Hey guys. Great to have you on board."
   utter_did_that_help:
-  - text: Did that help you?
+  - text: "Did that help you?"
   utter_stayhere:
-  - text: You are not done yet. I need your help!
-  - text: This mission is not over yet.
-  - text: We haven't finished this mission.
-  - text: Don't leave me hanging.
-  - text: This is not over yet.
+  - text: "You are not done yet. I need your help!"
+  - text: "This mission is not over yet."
+  - text: "We haven't finished this mission."
+  - text: "Don't leave me hanging."
+  - text: "This is not over yet."
   utter_goodbye:
-  - text: Bye
-  - text: 👋
-  - text: Later, guys!
+  - text: "Bye"
+  - text: "👋"
+  - text: "Later, guys!"
   utter_affirm:
-  - text: great
-  - text: 👍
-  - text: 😎
-  - text: 😉
+  - text: "great"
+  - text: "👍"
+  - text: "😎"
+  - text: "😉"
   utter_iamnotabot:
   - image: https://media0.giphy.com/media/L3WZFMFFqgtxnXe4bf/giphy.gif
-    text: Of course I am real...Could a bot do THIS?
-  - text: I am a Field Agent. Do you think Strix would hire a machine?
-  - text: What is even real nowadays, right?! Well, I am.
-  - text: Really funny.
-  - text: We will all get replaced some day I guess.
+    text: "Of course I am real...Could a bot do THIS?"
+  - text: "I am a Field Agent. Do you think Strix would hire a machine?"
+  - text: "What is even real nowadays, right?! Well, I am."
+  - text: "Really funny."
+  - text: "We will all get replaced some day I guess."
   utter_submit:
-  - text: Form has been filled!
+  - text: "Form has been filled!"
   utter_strix:
-  - text: STRIX is a global organization fighting cyber crime.
-  - text: STRIX is the agency that hired you and me. Remember?
-  - text: Didn't you pay attention during the introduction? We fight cyber crime. You are now part of it.
-  - text: Well, they are paying me. That's all I need to know.
+  - text: "STRIX is a global organization fighting cyber crime."
+  - text: "STRIX is the agency that hired you and me. Remember?"
+  - text: "Didn't you pay attention during the introduction? We fight cyber crime. You are now part of it."
+  - text: "Well, they are paying me. That's all I need to know."
   utter_password:
-  - text: This is what I need from you geniuses.
+  - text: "This is what I need from you geniuses."
   utter_chit_chat_agent:
-  - text: Can we focus on the case right now and chit chat later?
-  - text: Focus up!
-  - text: Stop waisting everybody's time. Focus on the mission!
-  - text: Come on guys, I need you to focus.
-  - text: Let's solve this case first.
+  - text: "Can we focus on the case right now and chit chat later?"
+  - text: "Focus up!"
+  - text: "Stop waisting everybody's time. Focus on the mission!"
+  - text: "Come on guys, I need you to focus."
+  - text: "Let's solve this case first."
   utter_city_old:
-  - text: I know the city already.
-  - text: You told me the city already.
-  - text: No need to spam city names.
-  - text: Stop sending me cities.
-  - text: Paris? London? What are you doing? I know the city already!
+  - text: "I know the city already."
+  - text: "You told me the city already."
+  - text: "No need to spam city names."
+  - text: "Stop sending me cities."
+  - text: "Paris? London? What are you doing? I know the city already!"
   utter_street_old:
-  - text: I know the street already.
-  - text: You told me the intersection already.
+  - text: "I know the street already."
+  - text: "You told me the intersection already."
   utter_password_old:
-  - text: I know the password already.
-  - text: You told me the code already.
-  - text: You told me the password already.
-  - text: I got it already.
+  - text: "I know the password already."
+  - text: "You told me the code already."
+  - text: "You told me the password already."
+  - text: "I got it already."
   utter_no_password_needed:
-  - text: I don't know how that should help me.
-  - text: Is this a code or something? I don't need that right now.
-  - text: I don't think you are focusing on what I need right now.
+  - text: "I don't know how that should help me."
+  - text: "Is this a code or something? I don't need that right now."
+  - text: "I don't think you are focusing on what I need right now."
   utter_city_not_street:
-  - text: I am looking for a city, not a street name.
-  - text: You need to look for a city, not a street.
+  - text: "I am looking for a city, not a street name."
+  - text: "You need to look for a city, not a street."
   utter_name_old:
-  - text: I already know the name.
+  - text: "I already know the name."
   utter_passcode_old:
-  - text: I already know the passcode.
+  - text: "I already know the passcode."
   utter_goal:
-  - text: You need to figure out which city we need to go to prevent a possible cyber crime.
-  - text: I need to know the name of the city they are targeting. You need to hurry!
-  - text: Can you figure out the city they are targeting for a cyber crime. We need to send our guys there.
+  - text: "You need to figure out which city we need to go to prevent a possible cyber crime."
+  - text: "I need to know the name of the city they are targeting. You need to hurry!"
+  - text: "Can you figure out the city they are targeting for a cyber crime. We need to send our guys there."
   utter_goal_detailed:
-  - text: You need to use the information and figure out which city they are targeting so that we can send somebody there.
+  - text: "You need to use the information and figure out which city they are targeting so that we can send somebody there."
   utter_help:
-  - text: I believe the city must be somewhere in the Midwest...if I can trust my sources.
-  - text: They call it the windy city.
-  - text: The city has lots and lots of bridges...and is close to a large lake.
+  - text: "I believe the city must be somewhere in the Midwest...if I can trust my sources."
+  - text: "They call it the windy city."
+  - text: "The city has lots and lots of bridges...and is close to a large lake."
   utter_motivate:
-  - text: Come on guys, you can do it! Maybe the city is somewhere in the Midwest?
-  - text: Don't leave me hanging, guys! It should be one of the largest cities in the US.
-  - text: You are close. I feel it! Check out cities close to a lake.
+  - text: "Come on guys, you can do it! Maybe the city is somewhere in the Midwest?"
+  - text: "Don't leave me hanging, guys! It should be one of the largest cities in the US."
+  - text: "You are close. I feel it! Check out cities close to a lake."
   utter_return_praise:
-  - text: You guys are the best!
-  - text: I would be touched...if I had feelings.
-  - text: I know, I know.
-  - text: What a team we are!
-  - text: That's what I call chemistry.
+  - text: "You guys are the best!"
+  - text: "I would be touched...if I had feelings."
+  - text: "I know, I know."
+  - text: "What a team we are!"
+  - text: "That's what I call chemistry."
   utter_profanity_response:
-  - text: Really classy, guys...
-  - text: '...'
-  - text: Why did they even hire you?
-  - text: That would be a case for HR, if we had one.
-  - text: No comment.
-  - text: whatever
-  - text: not gonna respond to that
+  - text: "Really classy, guys..."
+  - text: "..."
+  - text: "Why did they even hire you?"
+  - text: "That would be a case for HR, if we had one."
+  - text: "No comment."
+  - text: "whatever"
+  - text: "not gonna respond to that"
   utter_i_am_russ:
-  - text: You know who I am.
-  - text: We just talked. Don't you remember?
-  - text: Do you have Alzheimers? We just talked a minute ago.
-  - text: Very funny, agents.
-  - text: I am still the same guy I was a minute ago.
-  - text: I am who I am.
+  - text: "You know who I am."
+  - text: "We just talked. Don't you remember?"
+  - text: "Do you have Alzheimers? We just talked a minute ago."
+  - text: "Very funny, agents."
+  - text: "I am still the same guy I was a minute ago."
+  - text: "I am who I am."
   utter_city_russ:
-  - text: I am at the Strix headquarters waiting for your city.
+  - text: "I am at the Strix headquarters waiting for your city."
   utter_happy:
-  - text: 😂
-  - text: Oh you. 😄
-  - text: 😁
+  - text: "😂"
+  - text: "Oh you. 😄"
+  - text: "😁"
 actions:
 - action_verify_city
 - action_verify_street
