@@ -29,13 +29,13 @@ class ActionVerifycity(Action):
         #print(city)
 
         if city == None:
-            dispatcher.utter_message(text="I don't think that is a city. Did you spell correctly?")
+            dispatcher.utter_message(response="utter_no_city")
             return []
         elif city.lower() == correct_answer_city.lower():
-            dispatcher.utter_message(text="{} is correct! \n We will send someone there. Thanks for your help!".format(correct_answer_city))
+            dispatcher.utter_message(response="utter_correct_city", city=correct_answer_city)
             return [SlotSet("solution_city", correct_answer_city)]
         else:
-            dispatcher.utter_message(text="{} is wrong!".format(city))
+            dispatcher.utter_message(response="utter_incorrect_city", city=city)
             return [SlotSet("city", None)]
 
 
@@ -54,6 +54,9 @@ class ActionVerifyStreet(Action):
         # list for detected street values
         streets = []
 
+        # assmeble solution string of correct intersection
+        solution_string = "{} & {}".format(correct_answer_street_1, correct_answer_street_2)
+
         # go through all entities from last message   
         for entity in tracker.latest_message['entities']:
             # check if entity was detected as a street and append text value
@@ -63,31 +66,31 @@ class ActionVerifyStreet(Action):
         # validate if solution is correct if two streets were given (both have to be correct)
         if len(streets) == 2:
             if streets[0].lower() == correct_answer_street_1.lower() and streets[1].lower() == correct_answer_street_2.lower() or streets[1].lower() == correct_answer_street_1.lower() and streets[0].lower() == correct_answer_street_2.lower():
-                dispatcher.utter_message(text="Two street names were given: {} and {} - they are correct!".format(streets[0], streets[1]))
+                dispatcher.utter_message(response="utter_correct_intersection")
                 return [SlotSet("solution_street", "{} & {}".format(correct_answer_street_1, correct_answer_street_2))]
             else:
-                dispatcher.utter_message(text="Two street names were given: {} and {} - they are NOT correct!".format(streets[0], streets[1]))
+                dispatcher.utter_message(response="utter_incorrect_intersection")
                 return [SlotSet("last_street_guess", None)]
 
         # validate if solution is correct if only one street was given
         elif len(streets) == 1:
             # if last_street_guess has no saved value
             if last_street_guess == None:
-                dispatcher.utter_message(text="One street name was given: {}. What's the other street?".format(streets[0]))
+                dispatcher.utter_message(response="utter_one_street", street=streets[0])
                 return [SlotSet("last_street_guess", streets[0])]
             # if there was a saved street name
             else:
                 streets.append(last_street_guess)
                 if streets[0].lower() == correct_answer_street_1.lower() and streets[1].lower() == correct_answer_street_2.lower() or streets[1].lower() == correct_answer_street_1.lower() and streets[0].lower() == correct_answer_street_2.lower():
-                    dispatcher.utter_message(text="Two street names were given: {} and {} - they are correct!".format(streets[0], streets[1]))
+                    dispatcher.utter_message(response="utter_correct_intersection", intersection=solution_string)
                     return [SlotSet("solution_street", "{} & {}".format(correct_answer_street_1, correct_answer_street_2))]
                 else:
-                    dispatcher.utter_message(text="Two street names were given: {} and {} - they are NOT correct!".format(streets[0], streets[1]))
+                    dispatcher.utter_message(response="utter_incorrect_intersection")
                     return [SlotSet("last_street_guess", None)]
                 
         # complain if 0 or more than 2 street names were given 
         else:
-            dispatcher.utter_message(text="I don't get it. Can you please specify one specific intersection of two streets?")
+            dispatcher.utter_message(response="utter_no_two_streets")
             return [SlotSet("last_street_guess", None)]
 
 
@@ -104,15 +107,15 @@ class ActionVerifyPassword(Action):
 
         # remove everything thats not a digit
         passcode = "".join(filter(str.isdigit, passcode))       
-        print(passcode)
+        #print(passcode)
 
         # check if length is correct
 
         if passcode == correct_answer_password:
-            dispatcher.utter_message(text="{} is correct!".format(correct_answer_password))
+            dispatcher.utter_message(response="utter_correct_password", password=correct_answer_password)
             return [SlotSet("solution_password", correct_answer_password)]
         else:
-            dispatcher.utter_message(text="{} is wrong!".format(passcode))
+            dispatcher.utter_message(response="utter_incorrect_password", password=passcode)
             return [SlotSet("password", None)]
 
        

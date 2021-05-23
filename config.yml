@@ -21,6 +21,9 @@ pipeline:
   - name: EntitySynonymMapper
   - name: ResponseSelector
     epochs: 100
+    retrieval_intent: chit_chat
+  - name: FallbackClassifier
+    threshold: 0.4
 
 
 #pipeline:
@@ -58,3 +61,6 @@ policies:
     epochs: 100
     constrain_similarities: true
   - name: RulePolicy
+    # core_fallback_threshold: 0.4
+    # core_fallback_action_name: "action_default_fallback"
+    # enable_fallback_prediction: True

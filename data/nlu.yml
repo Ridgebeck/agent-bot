@@ -41,49 +41,148 @@ nlu:
     - Hi there!
     - hi
     - hey russ
-- intent: chit_chat_person
+    - good morning
+    - good evening
+    - good night
+    - good afternoon
+    - Good Morning
+    - Good Afternoon
+    - Good Evening
+    - Good Night
+    - Good morning
+    - Good afternoon
+    - Good evening
+    - Good night
+- intent: out_of_scope
   examples: |
-    - where do you live?
-    - how old are you?
-    - do you like gummy bears
-    - do you like sports
-    - whats your favorite sport
+    - I want to order food
+    - Who's the US President?
+    - Ice 🍨 tonight?
+    - My mum is calling
+    - Will it rain today
+    - Now we can chit chat
+    - Hahhaahh. You should go do some stand-up comedy
+    - Did you already read the times?
+    - But I would like to chit chat now
+    - who is the US president
+    - Is today a holiday?
+    - Do you like battle rap?
+    - is Santa Clause real?
+    - does Santa exist
+    - is Santa real?
+    - are you part of the matrix?
+- intent: chit_chat/how_are_you
+  examples: |
+    - what are you doing?
+    - How are you?
+    - How are you
+    - how r u
+    - How r u?
+    - how are you doing?
+    - How r u doing
+    - how are you
+    - how are you feeling today?
+    - how are you?
+    - how are you today?
+    - how R U?
+    - How Are You?
+- intent: chit_chat/person
+  examples: |
+    - what is your hobby?
+    - do you ahve a hobby?
+    - happy birthday
+    - whats your favorite animal?
+    - How is the day going?
     - where do you come from?
     - what are your hobbies?
     - where are you from?
     - what ice cream is the best?
-    - what is your favorite beer
-    - what's your favorite beer?
     - what are you up to?
-    - how are you?
     - what's your favorite ice cream?
-    - how are you today?
     - By the way what's your favorite ice cream?
-    - what are you doing?
-    - How are you?
-    - How are you
-    - Ice 🍨 tonight?
-    - how are you
-    - what is your hobby?
-    - whats your favorite animal?
-    - My mum is calling
-    - Will ist rain Today
-    - What is 1/2 +1/2
-    - Sambuca?
-    - Ouzo?
-    - Rhum ?
-    - Whisky and cigar?
-    - Let's have a beer
-    - Now we can chit chat
-    - How is the day going?
-    - Hahhaahh. You should go do some stand-up comedy
-    - Did you already read the focus?
+    - are you american
+    - where do you live?
     - How was your day?
-    - But I would like to chit chat now
+    - how is your day going?
+    - how old are you?
+    - do you like gummy bears
+    - do you like sports
+    - whats your favorite sport
     - What are you up to?
     - Are you from the United States?
     - what is your favorite movie
-    - whats 1 + 1
+    - do you like politics
+    - Are you a professional motivator?
+    - will you marry me?
+    - marry me!
+    - Are you Single?
+    - are you single
+    - do you like people
+    - Do you like people?
+- intent: chit_chat/math
+  examples: |
+    - What is 1/2+1/2
+    - What is 1 + 1
+    - Can you calculate 5+5
+    - What is 2 + 2
+    - 2+2
+    - 10-2?
+    - calculate 5*3
+    - What is 120 x 12?
+    - What is 15+2
+    - what is 17x3
+    - 22-3
+    - What is 1 and 1?
+    - tell me whats 4 plus 4
+    - what is 5 + 5
+- intent: chit_chat/alcohol
+  examples: |
+    - Sambuca?
+    - Ouzo?
+    - Rhum?
+    - Whisky and cigar?
+    - Let's have a beer
+    - lets have a drink
+    - drinks later?
+    - lets go to a bar
+    - lets have a few beers
+    - what is your favorite beer?
+    - what is your favorite drink?
+    - should we have a drink later?
+    - I really need a drink
+- intent: chit_chat/ask_name
+  examples: |
+    - who are you?
+    - what's your name?
+    - what is your name
+    - how are you called
+    - your name?
+    - who are you again
+    - what are you
+    - firstname?
+    - lastname?
+    - whats your firstname
+    - who am I talking to?
+    - who are we talking to?
+    - who is this?
+    - who is it?
+    - who r u
+    - who are u
+    - I didn't get your name
+    - Are you Russ
+    - Are you really Russ?
+    - Is your name Russ
+    - Are we talking to Russ?
+    - Are you sure you are Agent Russ?
+    - Are you sure you are Russ?
+    - are you Russ?
+    - who are you
+    - russ?
+    - are you russ?
+    - Are you Russ?
+    - Are you Russ.
+    - Who are you?
+    - is your name Russ?
 - intent: goodbye
   examples: |
     - good bye
@@ -120,6 +219,8 @@ nlu:
     - sounds good
     - sure
     - ok
+    - Ok
+    - OK
     - affirmative
     - absolutely
     - totally
@@ -133,11 +234,8 @@ nlu:
     - agreed
     - I agree
     - we agree
-    - ":)"
-    - Ok
     - Same here
     - Got it
-    - :)
     - Ok, I think I know it
     - No worries
     - Ok, I'm back
@@ -153,6 +251,7 @@ nlu:
     - Seems so
     - I think we can help you
     - great
+    - you are welcome
 - intent: deny
   examples: |
     - no
@@ -174,6 +273,7 @@ nlu:
   examples: |
     - are you a bot?
     - are you a human?
+    - are you expensive?
     - am I talking to a bot?
     - am I talking to a human?
     - are you like siri?
@@ -209,6 +309,11 @@ nlu:
     - this sucks
     - we are not getting it
     - I am not getting it
+    - I have no idea
+    - no idea
+    - no plan dude
+    - i have no plan
+    - we have no idea
     - what's the point
     - we are stuck
     - I am stuck
@@ -241,12 +346,15 @@ nlu:
     - we need help
     - I need help
     - we need a hint
+    - ok, can you help me a bit
     - I need a hint
     - can you help us?
     - hint
     - help!
     - help please
     - hint please
+    - any hint?
+    - any hints?
     - help us!
     - we need your help
     - we need your advice
@@ -270,19 +378,52 @@ nlu:
     - More hints?
     - Need help
     - Anything else that can help us?
-    - I know it's windy there, you poop.
     - Can you help us with the case?
     - Can you help me?
     - Can you help us a bit?
     - More hints
     - Any hints?
+    - any clues about the city we are looking for?
+    - any help about the city we are looking for?    
+    - any clues about the intersection we are looking for?
+    - any help about the intersection we are looking for?
+    - any clues about the streets we are looking for?
+    - any help about the streets we are looking for?  
+    - any clues about the password we are looking for?
+    - any help about the password we are looking for?  
+    - can you help us to find the city
+    - can you help us to find the street
+    - can you help us to find the intersection
+    - can you help us to find the password
+    - we need help with the city
+    - we need help with the street
+    - we need help with the intersection
+    - we need help with the password
+    - I need help please    
 - intent: praise
   examples: |
+    - you are smart
+    - you are clever
+    - you are intelligent
     - you are awesome
+    - you are cute
+    - you are beautiful
+    - you are handsome
     - you are great
     - you are fantastic
     - you are the best
     - you are amazing
+    - you are so smart
+    - you are so clever
+    - you are so intelligent    
+    - you are so awesome
+    - you are so cute
+    - you are so beautiful
+    - you are so handsome
+    - you are so great
+    - you are so fantastic
+    - you are the absolute best
+    - you are so amazing
     - I love you
     - we love you
     - you rock
@@ -313,6 +454,8 @@ nlu:
     - what should we do again?
     - what do you need
     - what do you need again?
+    - what are we doing here?
+    - what's next? Do we need to do something else?
     - whats the goal?
     - what's the goal
     - what is required
@@ -405,40 +548,6 @@ nlu:
     - hate you
     - you suck
     - you are so dumb
-- intent: who_are_you
-  examples: |
-    - who are you?
-    - what's your name?
-    - what is your name
-    - how are you called
-    - your name?
-    - who are you again
-    - what are you
-    - firstname?
-    - lastname?
-    - whats your firstname
-    - who am I talking to?
-    - who are we talking to?
-    - who is this?
-    - who is it?
-    - who r u
-    - who are u
-    - I didn't get your name
-    - Are you Russ
-    - Are you really Russ?
-    - Is your name Russ
-    - Are we talking to Russ?
-    - Are you sure you are Agent Russ?
-    - Are you sure you are Russ?
-    - are you Russ?
-    - who are you
-    - russ?
-    - are you russ?
-    - Are you Russ?
-    - Are you Russ.
-    - Who are you?
-    - Hi, are you American ?
-    - is your name  Russ?
 - intent: where_are_you
   examples: |
     - where are you?
@@ -588,6 +697,21 @@ nlu:
     - I am not helping you
     - I don't like that
     - this is dumb
+    - that makes me sad
+    - You are not very nice to me
+    - you are a jerk
+    - you are not nice
+    - you are bullying me
+    - you are not a supporting colleague
+    - you are not supporting
+    - you are not helping at all
+    - you are not helping
+    - I feel depressed
+    - I feel down
+    - I am sad
+    - this is sad
+    - everything is sad
+    - 
 - intent: mood_great
   examples: |
     - Hahahaha
@@ -603,6 +727,11 @@ nlu:
     - you are funny
     - lololol
     - Pleasure is on our side
+    - cool
+    - cool!
+    - cool! :-)
+    - ":)"
+    - :)    
 - intent: working_on_it
   examples: |
     - I am trying to find the city
@@ -892,6 +1021,88 @@ nlu:
     - [Waller St](street)
     - [14th street](street)
     - [Castro street](street)
+    - [first](street) and [oak](street)
+    - [oak](street) and [first](street)
+- intent: password
+  examples: |
+    - The password is [017489](password)
+    - password is [874598](password)
+    - The password is [8421563](password)
+    - password is [445820](password)
+    - The password is [0843100](password)
+    - password is [779634](password)
+    - The password is [8896732](password)
+    - password is [012345](password)
+    - The PW is [0174589](password)
+    - PW is [874598](password)
+    - The PW is [842563](password)
+    - PW is [4458520](password)
+    - The PW is [084100](password)
+    - PW is [779634](password)
+    - The PW is [8895632](password)
+    - PW is [012345](password)
+    - The code is [017489](password)
+    - code is [8745598](password)
+    - The code is [842563](password)
+    - code is [445820](password)
+    - The code is [084100](password)
+    - code is [77934](password)
+    - The code is [889632](password)
+    - code is [02345](password)
+    - The passcode is [07489](password)
+    - passcode is [874598](password)
+    - The passcode is [842563](password)
+    - passcode is [4455820](password)
+    - The passcode is [084100](password)
+    - passcode is [779634](password)
+    - The passcode is [889632](password)
+    - passcode is [5874968](password)
+    - passcode is: [123456](password)
+    - password: [017489](password)
+    - password: [87498](password)
+    - password: [8425563](password)
+    - password: [44520](password)
+    - password: [125870](password)
+    - password: [15789](password)
+    - code: [0841500](password)
+    - code: [779634](password)
+    - code: [889632](password)
+    - code: [01245](password)
+    - code: [145698](password)
+    - code: [1896748](password)
+    - passcode: [017489](password)
+    - passcode: [87498](password)
+    - passcode: [8425563](password)
+    - passcode: [44520](password)
+    - pw: [0841500](password)
+    - pw: [779634](password)
+    - pw: [889632](password)
+    - pw: [01245](password)
+    - I think the password is [14789657](password)
+    - I believe the password is [120345](password)
+    - I got it. The password is [889631](password)
+    - I got the PW! It is [14789657](password)
+    - Got it. The code is [12003](password)
+    - I think the code is [012784](password)
+    - is it [123456](password)?
+    - could it be [123456](password)?
+    - [123456](password)
+    - [789456](password)
+    - [468752](password)
+    - [987663](password)
+    - [997411](password)
+    - [18530](password)
+    - [1258746](password)
+    - [9987412](password)
+    - [12398745](password)
+    - [124578](password)
+    - [887755](password)
+    - [875136](password)
+    - [134896](password)
+    - [785263](password)
+- intent: nlu_fallback
+  examples: |
+    - purell is a hand sanitizer
 - synonym: first street
   examples: |
     - 1st
@@ -937,81 +1148,3 @@ nlu:
 - regex: password
   examples: |
     - [0-9]{4,8}
-- intent: password
-  examples: |
-    - The password is [017489](password)
-    - password is [874598](password)
-    - The password is [8421563](password)
-    - password is [445820](password)
-    - The password is [0843100](password)
-    - password is [779634](password)
-    - The password is [8896732](password)
-    - password is [012345](password)
-    - The PW is [0174589](password)
-    - PW is [874598](password)
-    - The PW is [842563](password)
-    - PW is [4458520](password)
-    - The PW is [084100](password)
-    - PW is [779634](password)
-    - The PW is [8895632](password)
-    - PW is [012345](password)
-    - The code is [017489](password)
-    - code is [8745598](password)
-    - The code is [842563](password)
-    - code is [445820](password)
-    - The code is [084100](password)
-    - code is [77934](password)
-    - The code is [889632](password)
-    - code is [02345](password)
-    - The passcode is [07489](password)
-    - passcode is [874598](password)
-    - The passcode is [842563](password)
-    - passcode is [4455820](password)
-    - The passcode is [084100](password)
-    - passcode is [779634](password)
-    - The passcode is [889632](password)
-    - passcode is [5874968](password)
-    - passcode is [5874968](password)
-    - passcode is: [123456](password)
-    - password: [017489](password)
-    - password: [87498](password)
-    - password: [8425563](password)
-    - password: [44520](password)
-    - password: [125870](password)
-    - password: [15789](password)
-    - code: [0841500](password)
-    - code: [779634](password)
-    - code: [889632](password)
-    - code: [01245](password)
-    - code: [145698](password)
-    - code: [1896748](password)
-    - passcode: [017489](password)
-    - passcode: [87498](password)
-    - passcode: [8425563](password)
-    - passcode: [44520](password)
-    - pw: [0841500](password)
-    - pw: [779634](password)
-    - pw: [889632](password)
-    - pw: [01245](password)
-    - I think the password is [14789657](password)
-    - I believe the password is [120345](password)
-    - I got it. The password is [889631](password)
-    - I got the PW! It is [14789657](password)
-    - Got it. The code is [12003](password)
-    - I think the code is [012784](password)
-    - is it [123456](password)?
-    - could it be [123456](password)?
-    - [123456](password)
-    - [789456](password)
-    - [468752](password)
-    - [987663](password)
-    - [997411](password)
-    - [18530](password)
-    - [1258746](password)
-    - [9987412](password)
-    - [12398745](password)
-    - [124578](password)
-    - [887755](password)
-    - [875136](password)
-    - [134896](password)
-    - [785263](password)

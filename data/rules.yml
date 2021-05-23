@@ -1,10 +1,29 @@
 version: "2.0"
 rules:
+
+# handle fallback and chitchat
+- rule: Handle fallback gracefully
+  steps:
+  - intent: nlu_fallback
+  - action: utter_fallback
+
+- rule: Respond to out of scope messages
+  steps:
+  - intent: out_of_scope
+  - action: utter_out_of_scope  
+
+- rule: Respond to chit chat
+  steps:
+  - intent: chit_chat
+  - action: utter_chit_chat    
+
+# handle bot challenge
 - rule: Don't admit to being a bot
   steps:
   - intent: bot_challenge
   - action: utter_iamnotabot
 
+# handle riddle logic
 - rule: Verify the input if intent is city and city riddle has not been solved
   condition:
   - slot_was_set:
@@ -52,8 +71,6 @@ rules:
 - rule: Verify input if intent is password and street riddle has been solved
   condition:
   - slot_was_set:
-    - solution_city: filled
-  - slot_was_set:
     - solution_street: filled
   - slot_was_set:
     - solution_password: null    
@@ -64,19 +81,65 @@ rules:
 - rule: Respond if intent is password but password riddle has been solved
   condition:
   - slot_was_set:
-    - solution_city: filled
-  - slot_was_set:
-    - solution_street: filled
-  - slot_was_set:
     - solution_password: filled    
   steps:
   - intent: password
   - action: utter_password_old
 
-- rule: Respond if intent is password and street riddle has not been solved
+# handle next goal intent based on story progress
+- rule: Utter next goal city riddle
   condition:
   - slot_was_set:
-    - solution_street: null
+    - solution_city: null
   steps:
-  - intent: password
-  - action: utter_no_password_needed
+  - intent: whats_the_next_goal
+  - action: utter_goal_city
+
+- rule: Utter next goal street riddle
+  condition:
+  - slot_was_set:
+    - solution_city: filled
+  - slot_was_set:
+    - solution_street: null    
+  steps:
+  - intent: whats_the_next_goal
+  - action: utter_goal_street
+
+- rule: Utter next goal password riddle
+  condition:
+  - slot_was_set:
+    - solution_street: filled
+  - slot_was_set:
+    - solution_password: null    
+  steps:
+  - intent: whats_the_next_goal
+  - action: utter_goal_password
+
+# handle next help intent based on story progress
+- rule: Give help to solve the city riddle
+  condition:
+  - slot_was_set:
+    - solution_city: null
+  steps:
+  - intent: need_help
+  - action: utter_help_city
+
+- rule: Give help to solve the street riddle
+  condition:
+  - slot_was_set:
+    - solution_city: filled
+  - slot_was_set:
+    - solution_street: null    
+  steps:
+  - intent: need_help
+  - action: utter_help_street
+
+- rule: Give help to solve the password riddle
+  condition:
+  - slot_was_set:
+    - solution_street: filled
+  - slot_was_set:
+    - solution_password: null    
+  steps:
+  - intent: need_help
+  - action: utter_help_password
