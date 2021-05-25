@@ -352,3 +352,109 @@ stories:
   - action: action_verify_password
   - slot_was_set:
     - solution_password: '123456'
+
+
+
+- story: Story from Conversation ID 2ea76380026144bc9fe30cffe828cd64
+  steps:
+  - intent: greet
+  - action: utter_first_greet
+  - intent: chit_chat
+  - action: utter_chit_chat
+  - intent: affirm
+  - action: utter_affirm
+  - intent: whats_the_next_goal
+  - action: utter_goal_city
+  - intent: whats_the_next_goal
+  - action: utter_goal_city
+  - intent: affirm
+  - action: utter_affirm
+  - intent: city
+    entities:
+    - city: Chicago
+  - slot_was_set:
+    - city: Chicago
+  - action: action_verify_city
+  - slot_was_set:
+    - solution_city: Chicago
+  - intent: affirm
+  - action: utter_affirm
+  - intent: unhappy_or_stuck
+  - action: utter_motivate
+  - intent: profanity
+  - action: utter_profanity_response
+  - intent: unhappy_or_stuck
+  - action: utter_motivate
+  - intent: praise
+  - action: utter_return_praise
+  - intent: mood_unhappy
+  - action: utter_motivate
+  - intent: whats_the_next_goal
+  - action: utter_goal_street
+  - intent: unhappy_or_stuck
+  - action: utter_motivate
+  - intent: affirm
+  - action: utter_affirm
+  - intent: street
+    entities:
+    - street: oak street
+  - action: action_verify_street
+  - slot_was_set:
+    - last_street_guess: oak street
+  - intent: need_help
+  - action: action_help_user
+  - slot_was_set:
+    - help_street: 1
+  - intent: mood_great
+  - intent: street
+    entities:
+    - street: Third street
+  - action: action_verify_street
+  - slot_was_set:
+    - last_street_guess: null
+  - intent: street
+    entities:
+    - street: first street
+  - action: action_verify_street
+  - slot_was_set:
+    - last_street_guess: first street
+  - intent: street
+    entities:
+    - street: oak street
+  - action: action_verify_street
+  - slot_was_set:
+    - solution_street: First Street & Oak Street
+  - intent: need_help
+  - action: action_help_user
+  - slot_was_set:
+    - help_password: 1
+  - intent: unhappy_or_stuck
+  - action: utter_motivate
+  - intent: whats_the_next_goal
+  - action: utter_goal_password
+  - intent: unhappy_or_stuck
+  - action: action_help_user
+  - slot_was_set:
+    - help_password: 2
+  - intent: need_help
+  - action: action_help_user
+  - slot_was_set:
+    - help_password: 3
+  - intent: affirm
+  - action: utter_affirm
+  - intent: password
+    entities:
+    - password: '345678'
+  - slot_was_set:
+    - password: '345678'
+  - action: action_verify_password
+  - slot_was_set:
+    - password: null
+  - intent: password
+    entities:
+    - password: '123456'
+  - slot_was_set:
+    - password: '123456'
+  - action: action_verify_password
+  - slot_was_set:
+    - solution_password: '123456'    

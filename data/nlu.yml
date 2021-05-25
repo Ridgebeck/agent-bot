@@ -125,6 +125,7 @@ nlu:
     - Are you Single?
     - are you single
     - do you like people
+    - What's your email address
     - Do you like people?
 - intent: chit_chat/math
   examples: |
@@ -177,6 +178,7 @@ nlu:
     - who is it?
     - who r u
     - who are u
+    - is your name  Russ?
     - I didn't get your name
     - Are you Russ
     - Are you really Russ?
@@ -1181,16 +1183,10 @@ nlu:
     - [875136](password)
     - [134896](password)
     - [785263](password)
-    - password:[123123](password)
+    - password: [123123](password)
     - passcode [456456](password)
-    - password:[456789](password)
+    - password: [456789](password)
     - Is it [345678](password)
-- intent: who_are_you
-  examples: |
-    - is your name  Russ?
-- intent: chit_chat_person
-  examples: |
-    - What's your email address
 - synonym: first street
   examples: |
     - 1st
