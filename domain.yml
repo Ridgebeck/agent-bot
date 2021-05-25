@@ -232,7 +232,7 @@ responses:
   utter_correct_password:
   - text: |-
       {password} worked! The door is open!
-       --THE MISSION ENDS HERE. THANKS FOR TESTING! YOU CAN START A NEW CONVERSATION BY CLICKING ON 'RESTART' ON THE RIGHT--
+       -- THE MISSION ENDS HERE. THANKS FOR TESTING! YOU CAN START A NEW CONVERSATION BY CLICKING ON 'RESTART' (RELOAD ICON ON MOBILE) --
   utter_incorrect_password:
   - text: '{password} did not work. Must be a different combination.'
   - text: Hhm, that did not work.
