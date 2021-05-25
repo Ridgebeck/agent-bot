@@ -142,6 +142,7 @@ nlu:
     - tell me whats 4 plus 4
     - what is 5 + 5
     - whats 1 + 1
+    - What is 1/2 +1/2
 - intent: chit_chat/alcohol
   examples: |
     - Sambuca?
@@ -1162,6 +1163,9 @@ nlu:
 - intent: who_are_you
   examples: |
     - is your name  Russ?
+- intent: chit_chat_person
+  examples: |
+    - What's your email address
 - synonym: first street
   examples: |
     - 1st
