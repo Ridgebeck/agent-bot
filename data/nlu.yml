@@ -390,6 +390,7 @@ nlu:
     - Fuck this intersection
     - I still don't understand
     - Where do I find it?
+    - We have no idea!
 - intent: need_help
   examples: |
     - we need help
@@ -1106,6 +1107,7 @@ nlu:
     - [Third street](street)?
     - Is it [First Street](street)?
     - [Oak]{"entity": "street", "value": "oak street"}
+    - [Oak Street](street), maybe?
 - intent: password
   examples: |
     - The password is [017489](password)
@@ -1214,10 +1216,10 @@ nlu:
     - FIRST Str
 - synonym: oak street
   examples: |
-    - oak
-    - Oak
-    - OAK
     - oak st
+    - Oak
+    - oak
+    - OAK
     - oak St
     - oak ST
     - oak Str
