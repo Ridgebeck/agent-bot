@@ -787,6 +787,7 @@ nlu:
     - this is sad
     - everything is sad
     - I think you are awful
+    - 😦
 - intent: mood_great
   examples: |
     - Hahahaha
