@@ -273,6 +273,7 @@ nlu:
     - [first avenue](street)
     - Roger that
     - Ok, you got me
+    - 👍
 - intent: deny
   examples: |
     - no
@@ -502,6 +503,10 @@ nlu:
     - No. No. YOU are the best!
     - You make me laugh.
     - You are so smart!
+    - 😘
+    - 🥰
+    - 😍
+    - 🤩
 - intent: whats_the_next_goal
   examples: |
     - I don't know what to do
@@ -804,6 +809,15 @@ nlu:
     - :)
     - :-D
     - Cool 😎
+    - 😆
+    - 😄
+    - 😎
+    - 😁
+    - 😂
+    - 😃
+    - 🤣
+    - 😅
+    - 🎉
 - intent: working_on_it
   examples: |
     - I am trying to find the city
