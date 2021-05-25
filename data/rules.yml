@@ -15,7 +15,19 @@ rules:
 - rule: Respond to chit chat
   steps:
   - intent: chit_chat
-  - action: utter_chit_chat    
+  - action: utter_chit_chat
+
+# handle greetings
+- rule: Handle greetings at the beginning
+  conversation_start: true
+  steps:
+  - intent: greet
+  - action: utter_first_greet
+
+- rule: Handle greetings afterwards
+  steps:
+  - intent: greet
+  - action: utter_greet  
 
 # handle bot challenge
 - rule: Don't admit to being a bot
@@ -116,30 +128,79 @@ rules:
   - action: utter_goal_password
 
 # handle next help intent based on story progress
-- rule: Give help to solve the city riddle
+# - rule: Give help to solve the city riddle
+#   condition:
+#   - slot_was_set:
+#     - solution_city: null
+#   steps:
+#   - intent: need_help
+#   - action: utter_help_city
+
+# - rule: Give help to solve the street riddle
+#   condition:
+#   - slot_was_set:
+#     - solution_city: filled
+#   - slot_was_set:
+#     - solution_street: null    
+#   steps:
+#   - intent: need_help
+#   - action: utter_help_street
+
+# - rule: Give help to solve the password riddle
+#   condition:
+#   - slot_was_set:
+#     - solution_street: filled
+#   - slot_was_set:
+#     - solution_password: null    
+#   steps:
+#   - intent: need_help
+#   - action: utter_help_password
+
+
+- rule: Offer customized help when help is requested
+  steps:
+  - intent: need_help
+  - action: action_help_user
+
+- rule: Give serious city hint when user affirms
   condition:
   - slot_was_set:
     - solution_city: null
+  - slot_was_set:
+    - hint_city: true
   steps:
-  - intent: need_help
-  - action: utter_help_city
+  - action: action_help_user
+  - intent: affirm
+  - action: utter_hint_city
 
-- rule: Give help to solve the street riddle
+- rule: Give serious street hint when user affirms
   condition:
   - slot_was_set:
     - solution_city: filled
   - slot_was_set:
-    - solution_street: null    
+    - solution_street: null 
+  - slot_was_set:
+    - hint_street: true
   steps:
-  - intent: need_help
-  - action: utter_help_street
+  - action: action_help_user
+  - intent: affirm
+  - action: utter_hint_street
 
-- rule: Give help to solve the password riddle
+- rule: Give serious password hint when user affirms
   condition:
   - slot_was_set:
-    - solution_street: filled
+    - solution_street: filled 
   - slot_was_set:
-    - solution_password: null    
+    - solution_password: null
+  - slot_was_set:
+    - hint_password: true
   steps:
-  - intent: need_help
-  - action: utter_help_password
+  - action: action_help_user
+  - intent: affirm
+  - action: utter_hint_password  
+
+- rule: Respond when user denies serious help
+  steps:
+  - action: action_help_user
+  - intent: deny
+  - action: utter_no_hint

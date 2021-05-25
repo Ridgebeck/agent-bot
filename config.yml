@@ -23,7 +23,7 @@ pipeline:
     epochs: 100
     retrieval_intent: chit_chat
   - name: FallbackClassifier
-    threshold: 0.4
+    threshold: 0.3
 
 
 #pipeline:

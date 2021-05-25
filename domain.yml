@@ -87,7 +87,45 @@ slots:
     initial_value: null
     auto_fill: false
     influence_conversation: true
+  help_city:
+    type: rasa.shared.core.slots.FloatSlot
+    initial_value: 0
+    auto_fill: false
+    influence_conversation: false
+    max_value: 2.0
+    min_value: 0.0
+  hint_city:
+    type: rasa.shared.core.slots.BooleanSlot
+    initial_value: false
+    auto_fill: false
+    influence_conversation: true
+  help_street:
+    type: rasa.shared.core.slots.FloatSlot
+    initial_value: 0
+    auto_fill: false
+    influence_conversation: false
+    max_value: 2.0
+    min_value: 0.0
+  hint_street:
+    type: rasa.shared.core.slots.BooleanSlot
+    initial_value: false
+    auto_fill: false
+    influence_conversation: true
+  help_password:
+    type: rasa.shared.core.slots.FloatSlot
+    initial_value: 0
+    auto_fill: false
+    influence_conversation: false
+    max_value: 2.0
+    min_value: 0.0
+  hint_password:
+    type: rasa.shared.core.slots.BooleanSlot
+    initial_value: false
+    auto_fill: false
+    influence_conversation: true
 responses:
+  utter_first_greet:
+  - text: Hello agents. Great to have you on board! I need you to help me find out which city the hacker group is targeting for their attack. Just text me the city name in this chat.
   utter_fallback:
   - text: What? Focus on the mission, agents.
   - text: Focus up, agents!
@@ -123,11 +161,10 @@ responses:
   - text: Math - are you serious? Focus on the mission, please.
   - text: I am not a numebrs person. You are supposed to be the brains.
   utter_greet:
-  - text: Hey guys. Great to have you on board.
+  - text: Hey guys.
   - text: Hi.
   - text: Hey everybody.
   - text: Hi, agents.
-  - text: Hey guys.
   utter_did_that_help:
   - text: Did that help you?
   utter_stayhere:
@@ -168,7 +205,7 @@ responses:
   - text: I don't get it. Is this a city?
   - text: Can you check your spelling? I don't get it.
   utter_correct_city:
-  - text: '{city} is correct! We will send someone there. Thanks for your help!'
+  - text: '{city} is correct. Fantastic job! Next, I need to know the intersection where the hackers have planted the transmission device. Just text me the two street names and we will send a team to check it out.'
   utter_incorrect_city:
   - text: I don't think {city} is correct.
   - text: I don't think this city is correct.
@@ -181,7 +218,7 @@ responses:
   - text: Alright, {street} and ...?
   - text: Ok, so you think {street}, but which cross street?
   utter_correct_intersection:
-  - text: '{intersection}, huh? I will check it out.'
+  - text: We sent a team to {intersection}. They found the device - awesome job! Next, you need to look for a 6 digit password to open the door at the hideout. Please hurry up!
   utter_incorrect_intersection:
   - text: That doesn't sound correct. I think it must be a different intersection.
   - text: No, we checked this intersection. That's not it.
@@ -189,13 +226,18 @@ responses:
   - text: I don't get it. Can you please specify an intersection of two streets?
   - text: Which intersection? I didn't get the two street names.
   utter_correct_password:
-  - text: '{password} worked! The door is open!'
+  - text: "{password} worked! The door is open!\n --THE MISSION ENDS HERE. THANKS FOR TESTING! YOU CAN START A NEW CONVERSATION BY CLICKING ON 'RESTART' ON THE RIGHT--"
   utter_incorrect_password:
   - text: '{password} did not work. Must be a different combination.'
   - text: Hhm, that did not work.
   - text: No, {password} did not work.
   - text: That didn't work. Do you have another one to try?
   - text: I tried {password}...didn't work.
+  utter_wrong_length_password:
+  - text: '{password} is not the right length.'
+  - text: Hhm, that combination doesn't have the right length.
+  - text: No, that's not even the right number of digits.
+  - text: "{password} is not correct. It's not the right length even."
   utter_city_old:
   - text: I know the city already.
   - text: You told me the city already.
@@ -230,6 +272,15 @@ responses:
   - text: I believe the city must be somewhere in the Midwest...if I can trust my sources.
   - text: I heard them talking about the windy city.
   - text: I would look for a large city with lots of bridges...shutting them down creates a huge chaos.
+  utter_need_hint:
+  - text: I can check my sources for more detailed information. Do you want me to do that?
+  - text: I thought you are the brains here. Do you want me to go through the data as well?
+  utter_no_hint:
+  - text: Ok, then continue searching. I will wait.
+  - text: Ok, then continue your search.
+  - text: Alright. I will wait.
+  - text: Ok, but please hurry up.
+  - text: Alright, but please hurry.
   utter_hint_city:
   - text: Have you checked Illinois? Should be a very large city there.
   - text: We know it must be one of the largest cities in the US and we are pretty sure that it is not New York or LA.
@@ -287,5 +338,6 @@ actions:
 - action_verify_city
 - action_verify_street
 - action_verify_password
+- action_help_user
 forms: {}
 e2e_actions: []

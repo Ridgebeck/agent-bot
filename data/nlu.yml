@@ -82,6 +82,15 @@ nlu:
     - How r u doing
     - how are you
     - how are you feeling today?
+    - what are you doing, Russ?
+    - Russ, how are you?
+    - How are you Russ
+    - how r u russ
+    - How r u, Russ?
+    - how are you doing Russ?
+    - How r u doing russ
+    - Russ, how are you
+    - how are you feeling today, Russ?    
     - how are you?
     - how are you today?
     - how R U?
@@ -213,6 +222,9 @@ nlu:
     - that sounds good
     - sounds great
     - correct
+    - alright
+    - Alright
+    - alrighty
     - sure thing
     - for sure!
     - got it
@@ -245,6 +257,7 @@ nlu:
     - Thanks
     - No problem
     - Sure
+    - got it
     - Got it 👍
     - Always a pleasure
     - Ok ok
@@ -276,6 +289,7 @@ nlu:
     - are you expensive?
     - am I talking to a bot?
     - am I talking to a human?
+    - are you sure you are not a bot????
     - are you like siri?
     - are you like Alexa
     - are you smarter than Alexa?
@@ -341,6 +355,32 @@ nlu:
     - Maybe I quit. I feel exhausted and I am hungry
     - And I am lost
     - I am hungry
+    - I still don't get it
+    - We still don't get it
+    - I cannot find the city
+    - we cannot find the city
+    - I cannot find the street
+    - we cannot find the street
+    - I cannot find the intersection
+    - we cannot find the intersection
+    - I cannot find the password
+    - we cannot find the password
+    - I cannot find the code
+    - we cannot find the code
+    - I cannot find the website
+    - we cannot find the website
+    - I couldn't find the city
+    - we couldn't find the city
+    - I couldn't find the street
+    - we couldn't find the street
+    - I couldn't find the intersection
+    - we couldn't find the intersection
+    - I couldn't find the password
+    - we couldn't find the password
+    - I couldn't find the code
+    - we couldn't find the code
+    - I couldn't find the website
+    - we couldn't find the website    
 - intent: need_help
   examples: |
     - we need help
@@ -456,6 +496,8 @@ nlu:
     - what do you need again?
     - what are we doing here?
     - what's next? Do we need to do something else?
+    - What's next?
+    - what do we need to do next?
     - whats the goal?
     - what's the goal
     - what is required
@@ -511,11 +553,19 @@ nlu:
     - Which case?
     - what‘s next?
     - whats next
+    - what is the mission?
+    - what's the mission
+    - can you tell me more about the mission
+    - can we get details about the mission
+    - what is the mission about?
 - intent: profanity
   examples: |
     - fuck you
     - I hate you!
     - you sucker
+    - you son of bitch
+    - you are a bitch
+    - i bitchslap you
     - you suck balls
     - motherfucker
     - mofo
@@ -711,7 +761,6 @@ nlu:
     - I am sad
     - this is sad
     - everything is sad
-    - 
 - intent: mood_great
   examples: |
     - Hahahaha
@@ -1100,9 +1149,9 @@ nlu:
     - [875136](password)
     - [134896](password)
     - [785263](password)
-- intent: nlu_fallback
-  examples: |
-    - purell is a hand sanitizer
+# - intent: nlu_fallback
+#   examples: |
+#     - purell is a hand sanitizer
 - synonym: first street
   examples: |
     - 1st

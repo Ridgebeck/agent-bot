@@ -16,7 +16,7 @@ correct_answer_street_1 = "First Street"
 correct_answer_street_2 = "Oak Street"
 correct_answer_password = "123456"
 
-class ActionVerifycity(Action):
+class ActionVerifyCity(Action):
 
     def name(self) -> Text:
         return "action_verify_city"
@@ -25,6 +25,7 @@ class ActionVerifycity(Action):
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
+        # store city slot in local variable
         city = tracker.get_slot("city")
         #print(city)
 
@@ -66,7 +67,7 @@ class ActionVerifyStreet(Action):
         # validate if solution is correct if two streets were given (both have to be correct)
         if len(streets) == 2:
             if streets[0].lower() == correct_answer_street_1.lower() and streets[1].lower() == correct_answer_street_2.lower() or streets[1].lower() == correct_answer_street_1.lower() and streets[0].lower() == correct_answer_street_2.lower():
-                dispatcher.utter_message(response="utter_correct_intersection")
+                dispatcher.utter_message(response="utter_correct_intersection", intersection=solution_string)
                 return [SlotSet("solution_street", "{} & {}".format(correct_answer_street_1, correct_answer_street_2))]
             else:
                 dispatcher.utter_message(response="utter_incorrect_intersection")
@@ -103,6 +104,7 @@ class ActionVerifyPassword(Action):
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
+        # store password slot in local variable
         passcode = tracker.get_slot("password")
 
         # remove everything thats not a digit
@@ -110,13 +112,93 @@ class ActionVerifyPassword(Action):
         #print(passcode)
 
         # check if length is correct
-
-        if passcode == correct_answer_password:
-            dispatcher.utter_message(response="utter_correct_password", password=correct_answer_password)
-            return [SlotSet("solution_password", correct_answer_password)]
-        else:
-            dispatcher.utter_message(response="utter_incorrect_password", password=passcode)
+        if len(passcode) != len(correct_answer_password):
+            dispatcher.utter_message(response="utter_wrong_length_password", password=passcode)
             return [SlotSet("password", None)]
+        else:
+            if passcode == correct_answer_password:
+                dispatcher.utter_message(response="utter_correct_password", password=correct_answer_password)
+                return [SlotSet("solution_password", correct_answer_password)]
+            else:
+                dispatcher.utter_message(response="utter_incorrect_password", password=passcode)
+                return [SlotSet("password", None)]
+
+class ActionHelpUser(Action):
+
+    def name(self) -> Text:
+        return "action_help_user"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+        # store all help slots in local variables
+        help_city = tracker.get_slot("help_city")
+        help_street = tracker.get_slot("help_street")
+        help_password = tracker.get_slot("help_password")
+
+        # store story progress slots in local variable
+        solution_city = tracker.get_slot("solution_city")
+        solution_street = tracker.get_slot("solution_street")
+        solution_password = tracker.get_slot("solution_password")
+
+        # print(solution_city)
+        # print(help_city)
+        # print(solution_street)
+        # print(help_street)
+        # print(solution_password)
+        # print(help_password)
+
+        # offer help based on story progress
+        if solution_password != None:
+            dispatcher.utter_message(text="The mission has been finished.")
+        elif solution_street != None:
+            # ask if serious hint is required
+            if help_password >= 2:
+                dispatcher.utter_message(response="utter_need_hint")
+                return [SlotSet("hint_password", True)]
+            # utter standard help
+            else:
+                dispatcher.utter_message(response="utter_help_password")
+                # increase help counter by one and save to slot
+                help_password += 1
+                return [SlotSet("help_password", help_password)] 
+        elif solution_city != None:
+            # ask if serious hint is required
+            if help_street >= 2:
+                dispatcher.utter_message(response="utter_need_hint")
+                return [SlotSet("hint_street", True)]
+            # utter standard help
+            else:
+                dispatcher.utter_message(response="utter_help_street")
+                # increase help counter by one and save to slot
+                help_street += 1
+                return [SlotSet("help_street", help_street)]  
+        else:
+            # ask if serious hint is required
+            if help_city >= 2:
+                dispatcher.utter_message(response="utter_need_hint")
+                return [SlotSet("hint_city", True)]
+            # utter standard help
+            else:
+                dispatcher.utter_message(response="utter_help_city")
+                # increase help counter by one and save to slot
+                help_city += 1
+                return [SlotSet("help_city", help_city)]
+
+
+
+        # # check if length is correct
+        # if len(passcode) != len(correct_answer_password):
+        #     dispatcher.utter_message(response="utter_wrong_length_password", password=passcode)
+        #     return [SlotSet("password", None)]
+        # else:
+        #     if passcode == correct_answer_password:
+        #         dispatcher.utter_message(response="utter_correct_password", password=correct_answer_password)
+        #         return [SlotSet("solution_password", correct_answer_password)]
+        #     else:
+        #         dispatcher.utter_message(response="utter_incorrect_password", password=passcode)
+        #         return [SlotSet("password", None)]                
 
        
 # class FacilityForm(FormValidationAction):
