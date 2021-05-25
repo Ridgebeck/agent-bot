@@ -41,10 +41,7 @@ nlu:
     - Hi there!
     - hi
     - hey russ
-    - good morning
-    - good evening
     - good night
-    - good afternoon
     - Good Morning
     - Good Afternoon
     - Good Evening
@@ -90,7 +87,7 @@ nlu:
     - how are you doing Russ?
     - How r u doing russ
     - Russ, how are you
-    - how are you feeling today, Russ?    
+    - how are you feeling today, Russ?
     - how are you?
     - how are you today?
     - how R U?
@@ -144,6 +141,7 @@ nlu:
     - What is 1 and 1?
     - tell me whats 4 plus 4
     - what is 5 + 5
+    - whats 1 + 1
 - intent: chit_chat/alcohol
   examples: |
     - Sambuca?
@@ -257,7 +255,6 @@ nlu:
     - Thanks
     - No problem
     - Sure
-    - got it
     - Got it 👍
     - Always a pleasure
     - Ok ok
@@ -265,6 +262,11 @@ nlu:
     - I think we can help you
     - great
     - you are welcome
+    - Thank you as well
+    - I think I have the answer to the riddle
+    - It's a pleasure for me as well
+    - nice
+    - [first avenue](street)
 - intent: deny
   examples: |
     - no
@@ -334,8 +336,6 @@ nlu:
     - this is going nowhere
     - this is frustrating
     - we have no clue
-    - we have no idea
-    - I have no idea
     - I have absolutely no idea
     - this blows
     - we are not making progress
@@ -380,7 +380,7 @@ nlu:
     - I couldn't find the code
     - we couldn't find the code
     - I couldn't find the website
-    - we couldn't find the website    
+    - we couldn't find the website
 - intent: need_help
   examples: |
     - we need help
@@ -424,13 +424,13 @@ nlu:
     - More hints
     - Any hints?
     - any clues about the city we are looking for?
-    - any help about the city we are looking for?    
+    - any help about the city we are looking for?
     - any clues about the intersection we are looking for?
     - any help about the intersection we are looking for?
     - any clues about the streets we are looking for?
-    - any help about the streets we are looking for?  
+    - any help about the streets we are looking for?
     - any clues about the password we are looking for?
-    - any help about the password we are looking for?  
+    - any help about the password we are looking for?
     - can you help us to find the city
     - can you help us to find the street
     - can you help us to find the intersection
@@ -439,7 +439,7 @@ nlu:
     - we need help with the street
     - we need help with the intersection
     - we need help with the password
-    - I need help please    
+    - I need help please
 - intent: praise
   examples: |
     - you are smart
@@ -455,7 +455,7 @@ nlu:
     - you are amazing
     - you are so smart
     - you are so clever
-    - you are so intelligent    
+    - you are so intelligent
     - you are so awesome
     - you are so cute
     - you are so beautiful
@@ -505,7 +505,6 @@ nlu:
     - what are the next steps?
     - why are we here?
     - what's the goal of this game?
-    - what are we doing here?
     - what is this game all about?
     - what do we have to achieve
     - how do we win this game?
@@ -740,6 +739,7 @@ nlu:
     - [Frankfurt](city)
     - Is it [Chicago](city)?
     - ok, [Chicago](city)?
+    - It's [Chicago](city). Right?
 - intent: mood_unhappy
   examples: |
     - Don't talk that way to me
@@ -780,7 +780,8 @@ nlu:
     - cool!
     - cool! :-)
     - ":)"
-    - :)    
+    - :)
+    - :-D
 - intent: working_on_it
   examples: |
     - I am trying to find the city
@@ -1072,6 +1073,12 @@ nlu:
     - [Castro street](street)
     - [first](street) and [oak](street)
     - [oak](street) and [first](street)
+    - [haight](street) and [ashbury](street)
+    - [1st]{"entity": "street", "value": "first street"}
+    - [oak st]{"entity": "street", "value": "oak street"}, [broadway](street), and [ashbury st](street)
+    - [ashbury](street) and [haight st](street)
+    - [1st](street) and [lombard](street)
+    - [1st street](street)
 - intent: password
   examples: |
     - The password is [017489](password)
@@ -1149,9 +1156,12 @@ nlu:
     - [875136](password)
     - [134896](password)
     - [785263](password)
-# - intent: nlu_fallback
-#   examples: |
-#     - purell is a hand sanitizer
+    - password:[123123](password)
+    - passcode [456456](password)
+    - password:[456789](password)
+- intent: who_are_you
+  examples: |
+    - is your name  Russ?
 - synonym: first street
   examples: |
     - 1st
