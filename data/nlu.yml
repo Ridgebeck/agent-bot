@@ -215,6 +215,7 @@ nlu:
     - see you around
     - bye bye
     - ciao
+    - We'll stay in contact
 - intent: affirm
   examples: |
     - yes
@@ -274,6 +275,9 @@ nlu:
     - Roger that
     - Ok, you got me
     - 👍
+    - Let's get down to business
+    - Allright
+    - Thank you
 - intent: deny
   examples: |
     - no
@@ -392,6 +396,7 @@ nlu:
     - I still don't understand
     - Where do I find it?
     - We have no idea!
+    - I'm not sure if my answer is right
 - intent: need_help
   examples: |
     - we need help
@@ -456,6 +461,7 @@ nlu:
     - I have no clue, do you know more?
     - Ok, can you help us where to look for it
     - Any tips where to find that information?
+    - How long ist the password again?
 - intent: praise
   examples: |
     - you are smart
@@ -580,6 +586,7 @@ nlu:
     - what is the mission about?
     - What is the mission?
     - Which mission, I am here to chat
+    - What do you need again?
 - intent: profanity
   examples: |
     - fuck you
@@ -765,6 +772,7 @@ nlu:
     - ok, [Chicago](city)?
     - It's [Chicago](city). Right?
     - Ok, is it [Chicago](city)?
+    - [Chicago](city) is the city
 - intent: mood_unhappy
   examples: |
     - Don't talk that way to me
@@ -1204,6 +1212,10 @@ nlu:
     - passcode [456456](password)
     - password: [456789](password)
     - Is it [345678](password)
+    - Is it [12244](password)
+- intent: should_i_give_answer
+  examples: |
+    - Should I you tell you the name?
 - synonym: first street
   examples: |
     - 1st
