@@ -50,6 +50,7 @@ nlu:
     - Good afternoon
     - Good evening
     - Good night
+    - hi russ
 - intent: out_of_scope
   examples: |
     - I want to order food
@@ -332,6 +333,11 @@ nlu:
     - And you are not a bot?
     - Are you abot?
     - you sound like a bot
+    - you are a bot, right?
+    - I think you are like Siri
+    - no, you are a bot
+    - are you like Siri?
+    - you a bot?
 - intent: unhappy_or_stuck
   examples: |
     - this sucks
@@ -514,6 +520,7 @@ nlu:
     - 🥰
     - 😍
     - 🤩
+    - you are awesome!
 - intent: whats_the_next_goal
   examples: |
     - I don't know what to do
@@ -588,6 +595,8 @@ nlu:
     - What is the mission?
     - Which mission, I am here to chat
     - What do you need again?
+    - what's the next goal, russ?
+    - what is the next goal?
 - intent: profanity
   examples: |
     - fuck you
@@ -774,6 +783,8 @@ nlu:
     - It's [Chicago](city). Right?
     - Ok, is it [Chicago](city)?
     - [Chicago](city) is the city
+    - Maybe it's [Chicago](city)?
+    - Is it [Detroit](city)?
 - intent: mood_unhappy
   examples: |
     - Don't talk that way to me
