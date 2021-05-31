@@ -55,6 +55,8 @@ intents:
     use_entities: true
 - chit_chat_person:
     use_entities: true
+- should_i_give_answer:
+    use_entities: true
 entities:
 - city
 - street
@@ -191,7 +193,7 @@ responses:
   utter_iamnotabot:
   - image: https://media0.giphy.com/media/L3WZFMFFqgtxnXe4bf/giphy.gif
     text: Of course I am real...Could a bot do THIS?
-  - text: We just talked.
+  - text: We just talked. Looked pretty real to me.
   - text: What is even real nowadays, right?! Well, I am.
   - text: Really funny, guys. Ofc I am real.
   - text: We will all get replaced some day I guess.
