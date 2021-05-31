@@ -839,6 +839,7 @@ nlu:
     - we are still working on it
     - I am still searching
     - I am still working on it
+    - I'll try my best
 - intent: time_limit
   examples: |
     - How much time do I have?
