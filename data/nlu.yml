@@ -278,6 +278,7 @@ nlu:
     - Let's get down to business
     - Allright
     - Thank you
+    - Understood
 - intent: deny
   examples: |
     - no
