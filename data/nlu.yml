@@ -280,6 +280,7 @@ nlu:
     - Allright
     - Thank you
     - Understood
+    - Do this, please.
 - intent: deny
   examples: |
     - no
