@@ -1228,7 +1228,23 @@ nlu:
     - Is it [12244](password)
 - intent: should_i_give_answer
   examples: |
-    - Should I you tell you the name?
+    - Should I tell you the name?
+    - Should I tell you the city?
+    - Should I tell you the street?
+    - Should I tell you the intersection?
+    - Should I tell you the password?
+    - Should I tell you the answer?
+    - Should I tell you the solution?
+    - Should we tell you the name?
+    - Should we tell you the city?
+    - Should we tell you the street?
+    - Should we tell you the intersection?
+    - Should we tell you the password?
+    - Should we tell you the answer?
+    - Should we tell you the solution?
+    - So you want the answer from me?
+    - So you want the answer from us?
+    - So you want the answer from me, huh?
 - synonym: first street
   examples: |
     - 1st
