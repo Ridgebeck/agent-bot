@@ -39,6 +39,8 @@ rules:
 - rule: Verify the input if intent is city and city riddle has not been solved
   condition:
   - slot_was_set:
+    - city: filled
+  - slot_was_set:
     - solution_city: null
   steps:
   - intent: city

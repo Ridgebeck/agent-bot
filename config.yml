@@ -59,12 +59,12 @@ policies:
 # If you'd like to customize them, uncomment and adjust the policies.
 # See https://rasa.com/docs/rasa/policies for more information.
   #- name: MemoizationPolicy # ISSUE: CONFLICTS WITH RULE POLICY!
-  - name: TEDPolicy
-    max_history: 5
-    epochs: 100
-    constrain_similarities: true
-    model_confidence: linear_norm
+  # - name: TEDPolicy
+  #   max_history: 5
+  #   epochs: 100
+  #   constrain_similarities: true
+  #   model_confidence: linear_norm
   - name: RulePolicy
-    # core_fallback_threshold: 0.4
-    # core_fallback_action_name: "action_default_fallback"
-    # enable_fallback_prediction: True
+    core_fallback_threshold: 0.2
+    core_fallback_action_name: "action_default_fallback"
+    enable_fallback_prediction: true
