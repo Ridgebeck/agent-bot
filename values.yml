@@ -11,13 +11,13 @@ rasax:
     # jwtSecret which is used to sign the jwtTokens of the users
     jwtSecret: "TiQ5OX0dj828LiQ0MJKg"
     # rasa x version
-    tag: "0.39.3"
+    tag: "0.40.1"
 # rasa: Settings common for all Rasa containers
 rasa:
     # token Rasa accepts as authentication token from other Rasa services
     token: "HN3D7HW6S369pNbFL7Uc"
     # tag refers to the Rasa image tag
-    tag: "2.5.0-full"
+    tag: "2.6.3-full"
 # RabbitMQ specific settings
 rabbitmq:
     # rabbitmq settings of the subchart
@@ -39,4 +39,4 @@ app:
     # name of the custom action server image to use
     name: "rsniklas/agent_bot_actions"
     # tag refers to the custom action server image tag
-    tag: "v1_1"
+    tag: "v1_8"

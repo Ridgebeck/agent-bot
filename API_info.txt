@@ -12,6 +12,7 @@ helm upgrade \
     rasa-x-1620684904 rasa-x/rasa-x
 
 # API URL - POST
-http://35.238.234.224:8000/webhooks/rest/webhook
+http://34.69.81.214:8000/webhooks/rest/webhook
+
 # body
 {"sender": "me", "message": "London"}
