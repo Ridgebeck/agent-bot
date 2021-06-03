@@ -132,13 +132,12 @@ slots:
 responses:
   utter_first_greet:
   - text: Hello agents. Great to have you on board! I need you to help me find out which city the hacker group is targeting for their attack. Just text me the city name in this chat.
-  utter_fallback:
-  - text: What? Focus on the mission, agents.
-  - text: Focus up, agents!
-  - text: Concentrate on the mission!
-  - text: Enough with this nonsense.
-  - text: Whatever you are trying to do here...stop it and focus up. I need your help.
-  - text: This is not helping me right now. Focus on the mission.
+  # utter_fallback:
+  # - text: Please focus on the mission, agents.
+  # - text: I don't get it. Can we focus on the next goal please.
+  # - text: Focus up, agents!
+  # - text: Concentrate on the mission!
+  # - text: This is not helping me right now. Focus on the mission.
   utter_out_of_scope:
   - text: Can we focus on the case right now and chit chat later?
   - text: Concentrate on the mission!
@@ -343,6 +342,11 @@ responses:
   - text: 😁
   utter_default:
   - text: Sorry, I am not getting it. Can we focus on the mission, please?
+  - text: Please focus on the mission, agents.
+  - text: I don't get it. Can we focus on the next goal please.
+  - text: Focus up, agents!
+  - text: Concentrate on the mission, please.
+  - text: This is not helping me right now. Focus on the mission.
 actions:
 - action_verify_city
 - action_verify_street
