@@ -7,6 +7,8 @@ session_config:
 intents:
 - city:
     use_entities: true
+- state:
+    use_entities: true
 - street:
     use_entities: true
 - password:
@@ -57,11 +59,17 @@ intents:
     use_entities: true
 entities:
 - city
+- state
 - street
 - password
 - strix
 slots:
   city:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  state:
     type: rasa.shared.core.slots.TextSlot
     initial_value: null
     auto_fill: true
@@ -343,6 +351,10 @@ responses:
   - text: Got it. You keep working on it.
   - text: Sure thing. I will wait.
   - text: Ok, I will wait, but please hurry.
+  utter_no_time_limit:
+  - text: I am kind of in a hurry here. So please send me the answers as quickly as you can. I wanna be done in 60 minutes.
+  - text: Well, the sooner you can get me the answers the better. I am not planning on staying longer than an hour.
+
 actions:
 - action_verify_city
 - action_verify_street

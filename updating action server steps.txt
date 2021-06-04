@@ -21,7 +21,7 @@ helm upgrade \
     --values values.yml \
     --namespace rasaxns \
     --reuse-values \
-    rasa-x-1620684904 rasa-x/rasa-x
+    rasa-x-1622164561 rasa-x/rasa-x
  
 # 7. check that everything is okay
 kubectl --namespace rasaxns get pods

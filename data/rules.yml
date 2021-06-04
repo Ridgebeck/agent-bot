@@ -43,7 +43,12 @@ rules:
 - rule: Respond to profanity
   steps:
   - intent: profanity
-  - action: utter_profanity_response  
+  - action: utter_profanity_response
+
+- rule: Respond to time limit
+  steps:
+  - intent: time_limit
+  - action: utter_no_time_limit  
 
 - rule: Respond to chit chat
   steps:
@@ -130,7 +135,6 @@ rules:
 # should_i_give_answer
 # are_you_sure
 # strix
-# time_limit
 # working_on_it
 # where_are_you
 

@@ -56,6 +56,11 @@ nlu:
     - Who's the US President?
     - Ice 🍨 tonight?
     - My mum is calling
+    - what time is it
+    - do you know what time it is
+    - What time is it?
+    - Can you tell me the time?
+    - What's the time?
     - Will it rain today
     - Now we can chit chat
     - Hahhaahh. You should go do some stand-up comedy
@@ -767,7 +772,8 @@ nlu:
     - Is it [Milwaukee](city)?
     - [CHICAGO](city) [CHICAGO](city) 😊😊😊
     - The City ist [Los Angeles](city)
-    - It's [Chicago](city)
+    - It's [Chicago](city), [Illinois](state)
+    - It's [Chicago](city), [IL](state)
     - The City is [Chicago](city) right?
     - [Germany](city)
     - [Salzburg](city)
@@ -781,6 +787,127 @@ nlu:
     - Maybe it's [Chicago](city)?
     - Is it [Detroit](city)?
     - So it might be [Chicago](city)?
+
+- intent: state
+  examples: |
+    - [Alabama](state)
+    - [Alaska](state)
+    - [Arizona](state)
+    - [Arkansas](state)
+    - [California](state)
+    - [Colorado](state)
+    - [Connecticut](state)
+    - [Delaware](state)
+    - [Florida](state)
+    - [Georgia](state)
+    - [Hawaii](state)
+    - [Idaho](state)
+    - [Illinois](state)
+    - [Indiana](state)
+    - [Iowa](state)
+    - [Kansas](state)
+    - [Kentucky](state)
+    - [Louisiana](state)
+    - [Maine](state)
+    - [Maryland](state)
+    - [Massachusetts](state)
+    - [Michigan](state)
+    - [Minnesota](state)
+    - [Mississippi](state)
+    - [Missouri](state)
+    - [Montana](state)
+    - [Nebraska](state)
+    - [Nevada](state)
+    - [New Hampshire](state)
+    - [New Jersey](state)
+    - [New Mexico](state)
+    - [New York](state)
+    - [North Carolina](state)
+    - [North Dakota](state)
+    - [Ohio](state)
+    - [Oklahoma](state)
+    - [Oregon](state)
+    - [Pennsylvania](state)
+    - [Rhode Island](state)
+    - [South Carolina](state)
+    - [South Dakota](state)
+    - [Tennessee](state)
+    - [Texas](state)
+    - [Utah](state)
+    - [Vermont](state)
+    - [Virginia[D]](state)
+    - [Washington](state)
+    - [West Virginia](state)
+    - [Wisconsin](state)
+    - [Wyoming](state)
+    - [AL](state)
+    - [AK](state)
+    - [AZ](state)
+    - [AR](state)
+    - [CA](state)
+    - [CO](state)
+    - [CT](state)
+    - [DE](state)
+    - [FL](state)
+    - [GA](state)
+    - [HI](state)
+    - [ID](state)
+    - [IL](state)
+    - [IN](state)
+    - [IA](state)
+    - [KS](state)
+    - [KY](state)
+    - [LA](state)
+    - [ME](state)
+    - [MD](state)
+    - [MA](state)
+    - [MI](state)
+    - [MN](state)
+    - [MS](state)
+    - [MO](state)
+    - [MT](state)
+    - [NE](state)
+    - [NV](state)
+    - [NH](state)
+    - [NJ](state)
+    - [NM](state)
+    - [NY](state)
+    - [NC](state)
+    - [ND](state)
+    - [OH](state)
+    - [OK](state)
+    - [OR](state)
+    - [PA](state)
+    - [RI](state)
+    - [SC](state)
+    - [SD](state)
+    - [TN](state)
+    - [TX](state)
+    - [UT](state)
+    - [VT](state)
+    - [VA](state)
+    - [WA](state)
+    - [WV](state)
+    - [WI](state)
+    - [WY](state)
+
+- intent: time_limit
+  examples: |
+    - Is there a time limit?
+    - Do we have a time limit?
+    - How much time do we have?
+    - Do you know if there is a time limit? 
+    - How much time is available?
+    - How much time do I have?
+    - Does this take long?
+    - How long is this mission?
+    - How long is this game?
+    - how long does it take?
+    - How long do we have to do this?
+    - when do you need the answer?
+    - When do you need the answers?
+    - Are you in a hurry?
+
 - intent: mood_great
   examples: |
     - Hahahaha
