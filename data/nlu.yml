@@ -98,6 +98,7 @@ nlu:
     - how R U?
     - How Are You?
     - Hownr u?
+    - Hey Russ, how are you?
 - intent: chit_chat/person
   examples: |
     - what is your hobby?
@@ -200,6 +201,7 @@ nlu:
     - Are you Russ.
     - Who are you?
     - is your name Russ?
+    - Are you an agent?
 - intent: goodbye
   examples: |
     - good bye
@@ -310,6 +312,7 @@ nlu:
     - nope
     - No I don't
     - No
+    - Nope
 - intent: bot_challenge
   examples: |
     - are you a bot?
@@ -351,6 +354,8 @@ nlu:
     - no, you are a bot
     - are you like Siri?
     - you a bot?
+    - No, you are a machine
+    - You are a bot!
 - intent: unhappy_or_stuck
   examples: |
     - this sucks
@@ -440,6 +445,8 @@ nlu:
     - 😦
     - i am stuck, russ
     - don't push me
+    - I don't like this
+    - This is dumb
 - intent: need_help
   examples: |
     - we need help
@@ -635,6 +642,11 @@ nlu:
     - What do you need again?
     - what's the next goal, russ?
     - what is the next goal?
+    - What do you want?
+    - I don't know what to do next
+    - What is the [first]{"entity": "street", "value": "first street"} mission?
+    - What is the riddle?
+    - What is the first riddle?
 - intent: profanity
   examples: |
     - fuck you
@@ -815,7 +827,7 @@ nlu:
     - Maybe it's [Chicago](city)?
     - Is it [Detroit](city)?
     - So it might be [Chicago](city)?
-
+    - Is it Chi-town?
 - intent: state
   examples: |
     - [Alabama](state)
@@ -918,13 +930,12 @@ nlu:
     - [WV](state)
     - [WI](state)
     - [WY](state)
-
 - intent: time_limit
   examples: |
     - Is there a time limit?
     - Do we have a time limit?
     - How much time do we have?
-    - Do you know if there is a time limit? 
+    - Do you know if there is a time limit?
     - How much time is available?
     - How much time do I have?
     - Does this take long?
@@ -935,7 +946,6 @@ nlu:
     - when do you need the answer?
     - When do you need the answers?
     - Are you in a hurry?
-
 - intent: mood_great
   examples: |
     - Hahahaha
