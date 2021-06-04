@@ -160,6 +160,7 @@ nlu:
     - what is your favorite drink?
     - should we have a drink later?
     - I really need a drink
+    - wanna have a beer later?
 - intent: chit_chat/ask_name
   examples: |
     - who are you?
@@ -285,6 +286,8 @@ nlu:
     - cool
     - cool!
     - cool! :-)
+    - do it
+    - yes!
 - intent: deny
   examples: |
     - no
@@ -429,7 +432,9 @@ nlu:
     - this is sad
     - everything is sad
     - I think you are awful
-    - 😦    
+    - 😦
+    - i am stuck, russ
+    - don't push me
 - intent: need_help
   examples: |
     - we need help
@@ -495,6 +500,8 @@ nlu:
     - Ok, can you help us where to look for it
     - Any tips where to find that information?
     - How long ist the password again?
+    - hmm...another hint?
+    - I need more hints
 - intent: praise
   examples: |
     - you are smart
@@ -773,6 +780,7 @@ nlu:
     - [Chicago](city) is the city
     - Maybe it's [Chicago](city)?
     - Is it [Detroit](city)?
+    - So it might be [Chicago](city)?
 - intent: mood_great
   examples: |
     - Hahahaha
@@ -1200,96 +1208,3 @@ nlu:
 - regex: password
   examples: |
     - [0-9]{4,8}
-
-# - intent: working_on_it
-#   examples: |
-#     - I am trying to find the city
-#     - I am working on it
-#     - We are working on it
-#     - working on it
-#     - let us do our magic
-#     - let me do my magic
-#     - we are still searching
-#     - we are still working on it
-#     - I am still searching
-#     - I am still working on it
-#     - I'll try my best
-# - intent: time_limit
-#   examples: |
-#     - How much time do I have?
-#     - How much time to we have?
-#     - Is it urgent?
-#     - Do we have 30min?
-#     - How long is this mission?
-#     - How long is this game?
-#     - How long does it take?
-#     - Does this game take long?
-#     - Does this mission take long?
-#     - How long do we have?
-#     - Is this mission long?
-#     - Is there a time limit?
-# - intent: are_you_sure
-#   examples: |
-#     - Are you sure?
-#     - Are you really sure?
-#     - you sure?
-#     - Do you mean that?
-#     - Are you certain?
-#     - Are you sure about that?
-# - intent: where_are_you
-#   examples: |
-#     - where are you?
-#     - whats your city
-#     - where r u
-#     - where are you right now
-#     - what is your city
-#     - where are you located?
-#     - where are you currently
-#     - are you close?
-#     - are you in San Francisco?
-#     - are you nearby?
-#     - are you watching us?
-#     - are you in the USA
-#     - are you in the US
-#     - are you in the states
-#     - are you at the headquarters?
-#     - are you at Strix?
-#     - are you on the road
-#     - Where are you right now?
-# - intent: strix
-#   examples: |
-#     - what is [strix](strix)
-#     - what is this [agency](strix)
-#     - can you tell me more about [strix](strix)
-#     - can you tell me more about the [agency](strix)
-#     - What is the [agency](strix) we work for?
-#     - Who is behind [strix](strix)
-#     - Who is behind this [agency](strix)
-#     - Can you tell me more about [Strix](strix)
-#     - Can you tell me more about the [agency](strix)
-#     - ok, can you tell me a bit more about [strix](strix)
-#     - ok, can you tell me a bit more about the [agency](strix)
-#     - who are you working for
-#     - who are we working for
-#     - [strix](strix)?
-#     - what is [strix](strix)?
-#     - What is [strix](strix)?
-# - intent: should_i_give_answer
-#   examples: |
-#     - Should I tell you the name?
-#     - Should I tell you the city?
-#     - Should I tell you the street?
-#     - Should I tell you the intersection?
-#     - Should I tell you the password?
-#     - Should I tell you the answer?
-#     - Should I tell you the solution?
-#     - Should we tell you the name?
-#     - Should we tell you the city?
-#     - Should we tell you the street?
-#     - Should we tell you the intersection?
-#     - Should we tell you the password?
-#     - Should we tell you the answer?
-#     - Should we tell you the solution?
-#     - So you want the answer from me?
-#     - So you want the answer from us?
-#     - So you want the answer from me, huh?
