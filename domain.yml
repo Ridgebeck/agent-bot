@@ -39,8 +39,6 @@ intents:
     use_entities: []
 - mood_great:
     use_entities: []
-- mood_unhappy:
-    use_entities: []
 - time_limit:
     use_entities: []
 - are_you_sure:
@@ -98,7 +96,7 @@ slots:
     initial_value: 0
     auto_fill: false
     influence_conversation: false
-    max_value: 2.0
+    max_value: 3.0
     min_value: 0.0
   hint_city:
     type: rasa.shared.core.slots.BooleanSlot
@@ -110,7 +108,7 @@ slots:
     initial_value: 0
     auto_fill: false
     influence_conversation: false
-    max_value: 2.0
+    max_value: 3.0
     min_value: 0.0
   hint_street:
     type: rasa.shared.core.slots.BooleanSlot
@@ -122,7 +120,7 @@ slots:
     initial_value: 0
     auto_fill: false
     influence_conversation: false
-    max_value: 2.0
+    max_value: 3.0
     min_value: 0.0
   hint_password:
     type: rasa.shared.core.slots.BooleanSlot
@@ -132,12 +130,6 @@ slots:
 responses:
   utter_first_greet:
   - text: Hello agents. Great to have you on board! I need you to help me find out which city the hacker group is targeting for their attack. Just text me the city name in this chat.
-  # utter_fallback:
-  # - text: Please focus on the mission, agents.
-  # - text: I don't get it. Can we focus on the next goal please.
-  # - text: Focus up, agents!
-  # - text: Concentrate on the mission!
-  # - text: This is not helping me right now. Focus on the mission.
   utter_out_of_scope:
   - text: Can we focus on the case right now and chit chat later?
   - text: Concentrate on the mission!
@@ -316,15 +308,14 @@ responses:
   utter_hint_password:
   - text: I just checked the website myself. The secret section is protected by a password. I think the password is hidden in the front page article.
   - text: The front page article on that website and the blue triangle are somewhat connected. Maybe a secret access?
-  utter_motivate:
-  - text: Come on guys, you can do it!
-  - text: Don't leave me hanging, guys! I need your help.
-  - text: You are close. I feel it! Just check your information carefully.
-  - text: I believe in you! Just check all of the evidence one more time.
+  utter_offer_help:
+  - text: Yous sound frustrated...need some help?
+  - text: Hmm...keep your chin up! Need help?
+  - text: Come on guys, you are getting close! Want me to help?
+  - text: Seems like you are stuck...need some help?
   utter_return_praise:
   - text: You guys are the best!
-  - text: I would be touched...if I had feelings.
-  - text: I know, I know.
+  - text: Awww, thanks!
   - text: What a team we are!
   - text: That's what I call chemistry.
   utter_profanity_response:
@@ -347,10 +338,18 @@ responses:
   - text: Focus up, agents!
   - text: Concentrate on the mission, please.
   - text: This is not helping me right now. Focus on the mission.
+  utter_will_wait:
+  - text: Ok, I will wait for you.
+  - text: Alright, you just let me know when you need help.
+  - text: Got it. You keep working on it.
+  - text: Sure thing. I will wait.
+  - text: Ok, I will wait, but please hurry.
 actions:
 - action_verify_city
 - action_verify_street
 - action_verify_password
 - action_help_user
+- action_offer_hint
+- action_next_goal
 forms: {}
 e2e_actions: []
