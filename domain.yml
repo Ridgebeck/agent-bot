@@ -176,7 +176,6 @@ responses:
   - text: Later, guys!
   utter_affirm:
   - text: great
-  - text: alright
   - text: ok
   - text: 👍
   - text: 😎
